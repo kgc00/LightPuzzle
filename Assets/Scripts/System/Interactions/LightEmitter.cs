@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Interfaces;
+using Models;
 using UnityEngine;
 
 namespace System.Interactions {
     [RequireComponent(typeof(BoxCollider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
-    public class LightEmitter : MonoBehaviour, IInteractable {
+    public class LightEmitter : MonoBehaviour, IInteractable, IInteractionHistoryProvider {
+        public bool repeat;
         private bool emitting;
         [SerializeField] private GameObject lightPrefab;
         private GameObject lightInstance;
@@ -29,6 +31,8 @@ namespace System.Interactions {
 
             yield return new WaitForSeconds(Lifetime);
 
+            if (!repeat) yield break;
+            
             StartCoroutine(SpawnLight());
         }
 
@@ -45,6 +49,15 @@ namespace System.Interactions {
             }
             
             yield break;
+        }
+
+        public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
+            return new InteractionEvent {
+                position = transform.position,
+                eulerRotation = transform.eulerAngles,
+                name = gameObject.name,
+                type = typeof(LightEmitter)
+            };
         }
     }
 }

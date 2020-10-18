@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Interfaces;
+using Models;
 using UnityEngine;
 
 namespace System.Interactions {
     [RequireComponent(typeof(BoxCollider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
-    public class PersistentGate : MonoBehaviour, ILightInteractable {
+    public class PersistentGate : MonoBehaviour, ILightInteractable, IInteractionHistoryProvider {
         private void OnEnable() {
             interactors = new List<ILightInteractor>();
         }
@@ -43,6 +44,15 @@ namespace System.Interactions {
 
         private bool HasBeenUnlockd() {
             return interactors.Count > 1;
+        }
+
+        public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
+            return new InteractionEvent {
+                position = transform.position,
+                eulerRotation = transform.eulerAngles,
+                name = gameObject.name,
+                type = typeof(PersistentGate)
+            };
         }
     }
 }

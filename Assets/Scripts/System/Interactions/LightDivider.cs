@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Interfaces;
+using Models;
 using UnityEngine;
 
 namespace System.Interactions {
     [RequireComponent(typeof(BoxCollider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
-    public class LightDivider : MonoBehaviour, ILightInteractable {
+    // TODO - disable / enable via player interaction, e.g. IInteractable
+    public class LightDivider : MonoBehaviour, ILightInteractable, IInteractionHistoryProvider {
         [SerializeField] private GameObject lightPrefab;
 
         public IEnumerator HandleInteraction(ILightInteractor interactor) {
@@ -35,5 +37,14 @@ namespace System.Interactions {
         private Quaternion GetLightRotationPositive() => Quaternion.Euler(transform.eulerAngles);
 
         private Quaternion GetLightRotationNegative() => Quaternion.Inverse(GetLightRotationPositive());
+        
+        public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
+            return new InteractionEvent {
+                position = transform.position,
+                eulerRotation = transform.eulerAngles,
+                name = gameObject.name,
+                type = typeof(LightDivider)
+            };
+        }
     }
 }

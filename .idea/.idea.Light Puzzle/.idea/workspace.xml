@@ -12,22 +12,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/81986B7D-E77F-470C-8157-A969000B3A00/e9/71a1c77b/CircleCollider2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity/Tile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/Editor/Sandbox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B17F35B0-8B86-4A3C-A09A-7032B437596E/82/0b91dcbc/Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CC8EC07-5538-4164-96E5-DB5D391208AC/a1/2f9dce93/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.3.4/Editor/Audio/AudioTrackInspector.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entity/Entity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entity/EntityBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entity/TileBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entity/Tile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entity/Actor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PreProduction/LevelData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/LevelData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/PointExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Vector3Extensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Board/Board.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PreProduction/EditorInputHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PreProduction/BoardCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/BoardCreatorInspector.cs" />
@@ -42,7 +33,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/InteractableGatherer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/Interactor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/InteractableGatherer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tests/Editor/Sandbox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotateInteraction.cs" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -59,16 +49,27 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/SoftGate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightDivider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IReflectiveSurface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightReflect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/ReflectiveSurface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/InteractableGatherer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ITrackInteractions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IInteractionHistory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/UnitDebugWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/InteractionEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IInteractionHistoryProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/LightHistoryWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IInteractionTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/LightHistoryEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/LightInteractionTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/ReflectiveSurface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/PersistentGate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/InteractionEvent.cs" />
       </list>
     </option>
   </component>
@@ -121,7 +122,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="37984000" />
+      <workItem from="1602964599347" duration="43495000" />
     </task>
     <servers />
   </component>
@@ -154,9 +155,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602964682721" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603040803092">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603049873249">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603040803092" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603049873249" />
   </component>
 </project>
