@@ -9,6 +9,10 @@ namespace System {
             rig = GetComponent<Rigidbody2D>();
         }
 
+        private void OnDisable() {
+            rig.velocity = Vector2.zero;
+        }
+
         private void FixedUpdate() {
             rig.velocity = transform.up * (speed * Time.fixedDeltaTime) ; 
         }
