@@ -17,17 +17,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/FSMBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FiniteStateMachineBase/FSMBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FiniteStateMachineBase/StateMachines/StateFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FiniteStateMachineBase/States/IEntityState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FiniteStateMachineBase/States/EntityState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/States/Mirror/MirrorIdle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/States/Mirror/MirrorInteracting.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/States/Player/PlayerIdle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/States/Player/PlayerMoving.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FiniteStateMachineBase/StateMachines/FSMBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/Player/PlayerFSM.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/Mirror/MirrorFSM.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Board/BoardCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Board/BoardCreator_orig.cs" />
@@ -68,6 +57,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Tags.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightReflect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteraction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteraction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/ILightInteractor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Color.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/ColorType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/LightColor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/SoftUnlockable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/SoftGate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
       </list>
     </option>
   </component>
@@ -120,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="28224000" />
+      <workItem from="1602964599347" duration="30052000" />
     </task>
     <servers />
   </component>
@@ -137,10 +137,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="846" y="266" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602974292117" />
-    <state x="794" y="241" key="RiderGenerateDialog" timestamp="1602983003818">
+    <state x="794" y="241" key="RiderGenerateDialog" timestamp="1602997215851">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="794" y="241" key="RiderGenerateDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602983003818" />
+    <state x="794" y="241" key="RiderGenerateDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602997215851" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1602984031830">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
