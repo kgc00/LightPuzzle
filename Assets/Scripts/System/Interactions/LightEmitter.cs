@@ -37,7 +37,13 @@ namespace System.Interactions {
 
         public IEnumerator HandleInteraction() {
             active = !active;
-            StopAllCoroutines();
+            if (!active) {
+                StopAllCoroutines();
+            }
+            else {
+                StartCoroutine(SpawnLight());
+            }
+            
             yield break;
         }
     }
