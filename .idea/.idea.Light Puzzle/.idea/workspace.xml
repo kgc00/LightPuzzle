@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="14019d30-62fd-4578-b187-ed70b99bc9a4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Models/Point.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity/Tile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/Editor/Sandbox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.3.4/Editor/Audio/AudioTrackInspector.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/LightEmitter/LightEmitterFSM.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/LightEmitter/MirrorFSM.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/States/TestEntityState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/FiniteStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/States/EntityState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/IFiniteStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/FSMBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FiniteStateMachineBase/FSMBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FiniteStateMachineBase/StateMachines/StateFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FiniteStateMachineBase/States/IEntityState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FiniteStateMachineBase/States/EntityState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/States/Mirror/MirrorIdle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/States/Mirror/MirrorInteracting.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/States/Player/PlayerIdle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/States/Player/PlayerMoving.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FiniteStateMachineBase/StateMachines/FSMBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/Player/PlayerFSM.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/Mirror/MirrorFSM.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Board/BoardCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Board/BoardCreator_orig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Point.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entity/Entity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entity/EntityBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entity/TileBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entity/Tile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entity/Actor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PreProduction/LevelData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/LevelData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/PointExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Vector3Extensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Board/Board.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PreProduction/EditorInputHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PreProduction/BoardCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/BoardCreatorInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/TileInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/UnitInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/SetVCam.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/SetVirtualCamFollowTarget.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Input/PlayerActions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LightPuzzleUtils/Helpers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IInteractor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/InteractableGatherer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/Interactor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/InteractableGatherer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tests/Editor/Sandbox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotateInteraction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1j1HGBlRBcaJBGMy7rA1o3GAZrd" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14019d30-62fd-4578-b187-ed70b99bc9a4" name="Default Changelist" comment="" />
+      <created>1602964581453</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602964581453</updated>
+      <workItem from="1602964599347" duration="20014000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="846" y="266" key="FileChooserDialogImpl" timestamp="1602974292117">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="846" y="266" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602974292117" />
+    <state x="794" y="241" key="RiderGenerateDialog" timestamp="1602983003818">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="794" y="241" key="RiderGenerateDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602983003818" />
+    <state x="461" y="184" key="SettingsEditor" timestamp="1602984031830">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="184" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602984031830" />
+    <state x="736" y="216" width="661" height="592" key="find.popup" timestamp="1602974301891">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="736" y="216" width="661" height="592" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602974301891" />
+    <state x="616" y="250" key="run.anything.popup" timestamp="1602964682721">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602964682721" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1602983511514">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602983511514" />
+  </component>
+</project>

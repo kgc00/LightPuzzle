@@ -1,0 +1,18 @@
+{
+    "name": "LightPuzzle",
+    "references": [
+        "GUID:ea6a6314f279f814facc8c48a7d3c9f1",
+        "GUID:d8a850e3cd197e74c8b8979083de6cb5",
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

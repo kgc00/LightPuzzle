@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\kirby\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\kirby\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Light Puzzle.-456985571.00" t="ExcludeRecursive" />
+    <e p="C:\Users\kirby\Documents\Game Dev\2020\Light Puzzle" t="IncludeRecursive">
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="BoardCreatorInspector.cs" t="Include" />
+          <e p="LightPuzzleEditorTools.asmdef" t="Include" />
+          <e p="TileInspector.cs" t="Include" />
+          <e p="UnitInspector.cs" t="Include" />
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Board" t="Include">
+            <e p="Board.cs" t="Include" />
+          </e>
+          <e p="Entity" t="Include">
+            <e p="Actor.cs" t="Include" />
+            <e p="EntityBase.cs" t="Include" />
+            <e p="Tile.cs" t="Include" />
+          </e>
+          <e p="FiniteStateMachineBase" t="Include">
+            <e p="FiniteStateMachineBase.asmdef" t="Include" />
+            <e p="StateMachines" t="Include">
+              <e p="FSMBehaviour.cs" t="Include" />
+              <e p="IFiniteStateMachine.cs" t="Include" />
+              <e p="StateFactory.cs" t="Include" />
+            </e>
+            <e p="States" t="Include">
+              <e p="EntityState.cs" t="Include" />
+              <e p="IEntityState.cs" t="Include" />
+            </e>
+          </e>
+          <e p="LightPuzzle.asmdef" t="Include" />
+          <e p="LightPuzzleUtils" t="Include">
+            <e p="Helpers.cs" t="Include" />
+          </e>
+          <e p="Models" t="Include">
+            <e p="LevelData.cs" t="Include" />
+            <e p="Point.cs" t="Include" />
+            <e p="PointExtensions.cs" t="Include" />
+            <e p="Vector3Extensions.cs" t="Include" />
+          </e>
+          <e p="PreProduction" t="Include">
+            <e p="BoardCreator.cs" t="Include" />
+            <e p="EditorInputHandler.cs" t="Include" />
+          </e>
+          <e p="StateMachines" t="Include">
+            <e p="Mirror" t="Include">
+              <e p="MirrorFSM.cs" t="Include" />
+            </e>
+            <e p="Player" t="Include">
+              <e p="PlayerFSM.cs" t="Include" />
+            </e>
+          </e>
+          <e p="States" t="Include">
+            <e p="Mirror" t="Include">
+              <e p="MirrorIdle.cs" t="Include" />
+              <e p="MirrorInteracting.cs" t="Include" />
+            </e>
+            <e p="Player" t="Include">
+              <e p="PlayerIdle.cs" t="Include" />
+              <e p="PlayerMoving.cs" t="Include" />
+            </e>
+          </e>
+          <e p="System" t="Include">
+            <e p="Input" t="Include">
+              <e p="PlayerAction.cs" t="Include" />
+            </e>
+            <e p="Interactions" t="Include">
+              <e p="InteractableGatherer.cs" t="Include" />
+              <e p="Interactor.cs" t="Include" />
+              <e p="RotationInteraction.cs" t="Include" />
+            </e>
+            <e p="Interfaces" t="Include">
+              <e p="IInteractable.cs" t="Include" />
+              <e p="IInteractor.cs" t="Include" />
+            </e>
+            <e p="LightEmitter.cs" t="Include" />
+            <e p="Movement.cs" t="Include" />
+            <e p="SetVirtualCamFollowTarget.cs" t="Include" />
+          </e>
+          <e p="Tests" t="Include">
+            <e p="Editor" t="Include">
+              <e p="Editor.asmdef" t="Include" />
+              <e p="Sandbox.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Editor.csproj" t="IncludeRecursive" />
+      <e p="FiniteStateMachineBase.csproj" t="IncludeRecursive" />
+      <e p="Light Puzzle.sln" t="IncludeFlat" />
+      <e p="LightPuzzle.csproj" t="IncludeRecursive" />
+      <e p="LightPuzzleEditorTools.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
