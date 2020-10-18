@@ -11,17 +11,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Models/Point.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity/Tile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/Editor/Sandbox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CC8EC07-5538-4164-96E5-DB5D391208AC/a1/2f9dce93/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.3.4/Editor/Audio/AudioTrackInspector.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/LightEmitter/LightEmitterFSM.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/LightEmitter/MirrorFSM.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/States/TestEntityState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/FiniteStateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/States/EntityState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/IFiniteStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/FSMBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FiniteStateMachineBase/FSMBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FiniteStateMachineBase/StateMachines/StateFactory.cs" />
@@ -67,6 +62,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/ReflectiveSurface.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entity/ForwardFacing.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/LightMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Tags.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/LightReflect.cs" />
       </list>
     </option>
   </component>
@@ -119,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="20014000" />
+      <workItem from="1602964599347" duration="28224000" />
     </task>
     <servers />
   </component>
@@ -152,9 +153,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602964682721" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1602983511514">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1602993912063">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602983511514" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602993912063" />
   </component>
 </project>

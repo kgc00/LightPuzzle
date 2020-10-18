@@ -35,6 +35,7 @@
           <e p="Entity" t="Include">
             <e p="Actor.cs" t="Include" />
             <e p="EntityBase.cs" t="Include" />
+            <e p="ForwardFacing.cs" t="Include" />
             <e p="Tile.cs" t="Include" />
           </e>
           <e p="FiniteStateMachineBase" t="Include">
@@ -57,6 +58,7 @@
             <e p="LevelData.cs" t="Include" />
             <e p="Point.cs" t="Include" />
             <e p="PointExtensions.cs" t="Include" />
+            <e p="Tags.cs" t="Include" />
             <e p="Vector3Extensions.cs" t="Include" />
           </e>
           <e p="PreProduction" t="Include">
@@ -88,13 +90,16 @@
             <e p="Interactions" t="Include">
               <e p="InteractableGatherer.cs" t="Include" />
               <e p="Interactor.cs" t="Include" />
+              <e p="LightEmitter.cs" t="Include" />
+              <e p="ReflectiveSurface.cs" t="Include" />
               <e p="RotationInteraction.cs" t="Include" />
             </e>
             <e p="Interfaces" t="Include">
               <e p="IInteractable.cs" t="Include" />
               <e p="IInteractor.cs" t="Include" />
             </e>
-            <e p="LightEmitter.cs" t="Include" />
+            <e p="LightMovement.cs" t="Include" />
+            <e p="LightReflect.cs" t="Include" />
             <e p="Movement.cs" t="Include" />
             <e p="SetVirtualCamFollowTarget.cs" t="Include" />
           </e>
