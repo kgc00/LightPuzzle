@@ -10,7 +10,6 @@ namespace System.Interactions {
         private const float Lifetime = 2f;
 
         private void Start() {
-            emitting = transform;
             StartCoroutine(SpawnLight());
         }
 

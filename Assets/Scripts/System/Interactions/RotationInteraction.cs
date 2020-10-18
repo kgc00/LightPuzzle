@@ -7,7 +7,7 @@ namespace System.Interactions {
     public class RotationInteraction : MonoBehaviour, IInteractable {
         private bool rotating;
         private int rotationModifer = 1;
-        private float RotationAmount => 90f * rotationModifer;
+        private float RotationAmount => 180 * rotationModifer;
         public const float Duration = 0.5f;
 
         public IEnumerator HandleInteraction() {

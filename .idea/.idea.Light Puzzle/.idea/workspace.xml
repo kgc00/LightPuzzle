@@ -9,6 +9,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Models/Point.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/81986B7D-E77F-470C-8157-A969000B3A00/e9/71a1c77b/CircleCollider2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity/Tile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/Editor/Sandbox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CC8EC07-5538-4164-96E5-DB5D391208AC/a1/2f9dce93/Transform.cs" root0="SKIP_HIGHLIGHTING" />
@@ -17,8 +18,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachines/Mirror/MirrorFSM.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Board/BoardCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Board/BoardCreator_orig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Point.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entity/Entity.cs" />
@@ -48,15 +47,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/InteractableGatherer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tests/Editor/Sandbox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotateInteraction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/ReflectiveSurface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entity/ForwardFacing.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Tags.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/LightReflect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/ILightInteractor.cs" />
@@ -65,9 +61,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/LightColor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/SoftUnlockable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/SoftGate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightDivider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/LightReflect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
       </list>
     </option>
   </component>
@@ -120,7 +121,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="30052000" />
+      <workItem from="1602964599347" duration="34412000" />
     </task>
     <servers />
   </component>

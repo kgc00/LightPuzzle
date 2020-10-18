@@ -1,18 +1,14 @@
 ﻿using System.Collections;
 using System.Interactions;
-using System.Interfaces;
-using Entity;
 using Models;
 using UnityEngine;
 
 namespace System {
     [RequireComponent(typeof(CircleCollider2D))]
+    [RequireComponent(typeof(Rigidbody2D))]
     public class LightReflect : MonoBehaviour {
-        private void OnCollisionEnter2D(Collision2D other) {
-            if (other.gameObject.CompareTag(Tags.Board)) Destroy(gameObject);
-        }
-
         private void OnTriggerEnter2D(Collider2D other) {
+            if (other.gameObject.CompareTag(Tags.Board)) Destroy(gameObject);
             var surface = other.GetComponent<ReflectiveSurface>();
             if (surface == null) return;
 

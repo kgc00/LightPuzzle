@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339273ac7f8636145a6cf4bd2f467bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardDir: {fileID: 0}
   lightPrefab: {fileID: 5652666616769987888, guid: 1f54f45a6dbde6d499df8d76b678c24f, type: 3}
 --- !u!212 &1848340394
 SpriteRenderer:
@@ -85,7 +84,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c0ccd2d54293404459edd5c0c3b93ab6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

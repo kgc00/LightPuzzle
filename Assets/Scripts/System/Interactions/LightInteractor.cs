@@ -6,7 +6,10 @@ namespace System.Interactions {
     [RequireComponent(typeof(CircleCollider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
     public class LightInteractor : MonoBehaviour, ILightInteractor {
+        public GameObject Behaviour { get; private set; }
         public LightColor Color { get; private set; } = LightColor.White;
+
+        private void Awake() => Behaviour = gameObject;
 
         public void Interact(ILightInteractable interactable) {
             StartCoroutine(interactable.HandleInteraction(this));
