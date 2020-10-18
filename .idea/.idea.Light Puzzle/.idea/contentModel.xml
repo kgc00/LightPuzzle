@@ -94,15 +94,16 @@
               <e p="LightDivider.cs" t="Include" />
               <e p="LightEmitter.cs" t="Include" />
               <e p="LightInteractor.cs" t="Include" />
+              <e p="PersistentGate.cs" t="Include" />
               <e p="ReflectiveSurface.cs" t="Include" />
               <e p="RotationInteraction.cs" t="Include" />
-              <e p="SoftGate.cs" t="Include" />
             </e>
             <e p="Interfaces" t="Include">
               <e p="IInteractable.cs" t="Include" />
               <e p="IInteractor.cs" t="Include" />
               <e p="ILightInteractable.cs" t="Include" />
               <e p="ILightInteractor.cs" t="Include" />
+              <e p="IReflectiveSurface.cs" t="Include" />
             </e>
             <e p="LightMovement.cs" t="Include" />
             <e p="LightReflect.cs" t="Include" />
