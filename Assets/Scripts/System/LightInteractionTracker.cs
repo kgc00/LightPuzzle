@@ -28,7 +28,7 @@ namespace System {
 
             if (provider == null) return;
 
-            History.Add(provider.TrackInteraction(this));
+            History.Insert( 0, provider.TrackInteraction(this));
         }
 
         public GameObject Behaviour => gameObject;

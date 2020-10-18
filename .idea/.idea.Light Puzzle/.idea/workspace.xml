@@ -19,7 +19,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/PreProduction/EditorInputHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PreProduction/BoardCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/BoardCreatorInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/TileInspector.cs" />
@@ -70,6 +69,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/InteractionEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Vector3Extensions.cs" />
       </list>
     </option>
   </component>
@@ -122,7 +122,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="43495000" />
+      <workItem from="1602964599347" duration="43985000" />
     </task>
     <servers />
   </component>
