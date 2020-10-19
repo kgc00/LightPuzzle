@@ -97,6 +97,7 @@
               <e p="LightEmitter.cs" t="Include" />
               <e p="LightInteractor.cs" t="Include" />
               <e p="MirrorSurface.cs" t="Include" />
+              <e p="NonPersistentGate.cs" t="Include" />
               <e p="PersistentGate.cs" t="Include" />
               <e p="RotationInteraction.cs" t="Include" />
             </e>

@@ -39,12 +39,8 @@ namespace System.Interactions {
         private Quaternion GetLightRotationNegative() => Quaternion.Inverse(GetLightRotationPositive());
         
         public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
-            return new InteractionEvent {
-                position = transform.position.Snapped(),
-                eulerRotation = transform.eulerAngles,
-                name = gameObject.name,
-                type = typeof(LightDivider)
-            };
+            return new InteractionEvent(transform, GetType());
+
         }
     }
 }

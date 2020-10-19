@@ -55,12 +55,7 @@ namespace System.Interactions {
         private bool HasBeenUnlockd() => interactors.Count > 1;
 
         public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
-            return new InteractionEvent {
-                position = transform.position.Snapped(),
-                eulerRotation = transform.eulerAngles,
-                name = gameObject.name,
-                type = typeof(PersistentGate)
-            };
+            return new InteractionEvent(transform, GetType());
         }
     }
 }

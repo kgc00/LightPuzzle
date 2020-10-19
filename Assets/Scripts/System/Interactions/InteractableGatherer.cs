@@ -33,9 +33,5 @@ namespace System.Interactions {
             if (interactable == null) return;
             interactables.Remove(interactable);
         }
-
-        private void OnGUI() {
-            GUILayout.Box($"interactables: {interactables.Count}");
-        }
     }
 }

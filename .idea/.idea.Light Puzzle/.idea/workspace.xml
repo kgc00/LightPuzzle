@@ -19,7 +19,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Editor/TileInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/UnitInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/SetVCam.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/SetVirtualCamFollowTarget.cs" />
@@ -50,7 +49,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IReflectiveSurface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/InteractableGatherer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ITrackInteractions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IInteractionHistory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/UnitDebugWindow.cs" />
@@ -59,17 +57,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/LightHistoryWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/LightHistoryEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/ReflectiveSurface.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/InteractionEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Vector3Extensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightReflect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IInteractionTracker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/MirrorSurface.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/InteractionObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/LightInteractionTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/PersistentGate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/LightInteractionTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/MirrorSurface.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/InteractableGatherer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/InteractionObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/NonPersistentGate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/InteractionEvent.cs" />
       </list>
     </option>
   </component>
@@ -122,7 +122,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="49045000" />
+      <workItem from="1602964599347" duration="53984000" />
     </task>
     <servers />
   </component>
@@ -139,25 +139,25 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="846" y="266" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602974292117" />
-    <state x="794" y="241" key="RiderGenerateDialog" timestamp="1602997215851">
+    <state x="794" y="241" key="RiderGenerateDialog" timestamp="1603071148553">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="794" y="241" key="RiderGenerateDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602997215851" />
+    <state x="794" y="241" key="RiderGenerateDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603071148553" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1602984031830">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="184" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602984031830" />
-    <state x="736" y="216" width="678" height="622" key="find.popup" timestamp="1603050617066">
+    <state x="736" y="216" width="678" height="652" key="find.popup" timestamp="1603074956230">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="736" y="216" width="678" height="622" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603050617066" />
-    <state x="616" y="250" key="run.anything.popup" timestamp="1602964682721">
+    <state x="736" y="216" width="678" height="652" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603074956230" />
+    <state x="616" y="250" key="run.anything.popup" timestamp="1603074906610">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602964682721" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603069454075">
+    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603074906610" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603087241596">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603069454075" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603087241596" />
   </component>
 </project>

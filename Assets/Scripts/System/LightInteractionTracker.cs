@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Interactions;
 using System.Interfaces;
 using Models;
 using UnityEngine;
@@ -36,19 +37,23 @@ namespace System {
         }
 
         public void OnInteraction(Vector3 position) {
-            print("Called");
             for (int i = 0; i < history.Count; i++) {
-                if (history[i].position.Snapped() != position.Snapped()) continue;
+                if (history[i].SnappedPosition.Snapped() != position.Snapped()) continue;
 
-                print("Found Interaction");
-
-                gameObject.transform.SetPositionAndRotation(history[i].position,
-                    Quaternion.Euler(history[i].eulerRotation));
+                gameObject.transform.SetPositionAndRotation(history[i].SnappedPosition,
+                    Quaternion.Euler(history[i].EulerRotation));
                 gameObject.SetActive(true);
 
-                // spawning the object on top of that position will 'regenerate' the extra event we are deleting
-                history.RemoveRange(0, i + 1);
-                break;
+                for (int j = 0; j < i + 1; j++) {
+                    print(history[j].Type);
+                    if (history[j].Type != typeof(NonPersistentGate)) continue;
+
+                    InteractionObserver.OnNonPersistentGateInteractionRemoved(history[j].SnappedPosition,
+                        Behaviour.GetComponent<ILightInteractor>());
+                    // spawning the object on top of that position will 'regenerate' the extra event we are deleting
+                    history.RemoveRange(0, i + 1);
+                    break;
+                }
             }
         }
     }
