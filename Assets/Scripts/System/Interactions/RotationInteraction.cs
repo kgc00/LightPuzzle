@@ -5,7 +5,7 @@ using Models;
 using UnityEngine;
 
 namespace System.Interactions {
-    public class RotationInteraction : MonoBehaviour, IInteractable, IInteractionHistoryProvider {
+    public class RotationInteraction : MonoBehaviour, IInteractable {
         private bool rotating;
         private int rotationModifer = 1;
         private float RotationAmount => 180 * rotationModifer;
@@ -30,6 +30,7 @@ namespace System.Interactions {
         private void EndRotation() {
             rotating = false;
             FlipRotationDirection();
+            InteractionObserver.OnInteractionEvent(transform.position.Snapped());
         }
 
         private Vector3 GetNewEuler() =>
@@ -42,15 +43,6 @@ namespace System.Interactions {
         /// </summary>
         private void FlipRotationDirection() {
             rotationModifer *= -1;
-        }
-        
-        public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
-            return new InteractionEvent {
-                position = transform.position.Snapped(),
-                eulerRotation = transform.eulerAngles,
-                name = gameObject.name,
-                type = typeof(RotationInteraction)
-            };
         }
     }
 }

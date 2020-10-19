@@ -4,7 +4,7 @@ using Models;
 using UnityEngine;
 
 namespace System.Interactions {
-    public class ReflectiveSurface : MonoBehaviour, IReflectiveSurface, IInteractionHistoryProvider {
+    public class MirrorSurface : MonoBehaviour, IReflectiveSurface, IInteractionHistoryProvider {
         public IEnumerator Reflect(LightReflect light) {
             while (Vector3.Distance(light.transform.position, transform.position) > .05f) {
                 yield return new WaitForEndOfFrame();
@@ -18,7 +18,7 @@ namespace System.Interactions {
                 position = transform.position.Snapped(),
                 eulerRotation = transform.eulerAngles,
                 name = gameObject.name,
-                type = typeof(ReflectiveSurface)
+                type = typeof(MirrorSurface)
             };
         }
     }
