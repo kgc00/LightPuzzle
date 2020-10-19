@@ -8,6 +8,8 @@ namespace System.Interactions {
     [RequireComponent(typeof(BoxCollider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
     public class PersistentGate : MonoBehaviour, ILightInteractable, IInteractionHistoryProvider {
+        private List<ILightInteractor> interactors;
+
         private void OnEnable() {
             interactors = new List<ILightInteractor>();
         }
@@ -16,12 +18,22 @@ namespace System.Interactions {
             interactors = null;
         }
 
+        private void OnTriggerExit2D(Collider2D other) {
+            if(!gameObject.activeSelf) return;
+
+            var lightInteractor = other.GetComponent<ILightInteractor>();
+            if (interactors.Contains(lightInteractor)) {
+                lightInteractor.Behaviour.GetComponent<LightMovement>().enabled = true;
+                interactors.Remove(lightInteractor);
+            }
+        }
+
         public IEnumerator HandleInteraction(ILightInteractor interactor) {
             while (Vector3.Distance(interactor.Behaviour.transform.position, transform.position) > .05f) {
                 yield return new WaitForEndOfFrame();
             }
             
-            if(interactors == null) yield break;
+            if (!gameObject.activeSelf) yield break;
             
             if (!interactors.Contains(interactor)) interactors.Add(interactor);
             
@@ -40,11 +52,7 @@ namespace System.Interactions {
         private LightMovement GetMovement(ILightInteractor interactor) => 
             interactor.Behaviour.GetComponent<LightMovement>();
 
-        private List<ILightInteractor> interactors;
-
-        private bool HasBeenUnlockd() {
-            return interactors.Count > 1;
-        }
+        private bool HasBeenUnlockd() => interactors.Count > 1;
 
         public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
             return new InteractionEvent {

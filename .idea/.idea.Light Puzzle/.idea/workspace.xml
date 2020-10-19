@@ -59,7 +59,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/LightHistoryWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/LightHistoryEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/ReflectiveSurface.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/PersistentGate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/InteractionEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Vector3Extensions.cs" />
@@ -70,6 +69,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/InteractionObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightInteractionTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/PersistentGate.cs" />
       </list>
     </option>
   </component>
@@ -122,7 +122,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="47746000" />
+      <workItem from="1602964599347" duration="48194000" />
     </task>
     <servers />
   </component>
@@ -155,9 +155,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602964682721" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603050674233">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603069454075">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603050674233" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603069454075" />
   </component>
 </project>
