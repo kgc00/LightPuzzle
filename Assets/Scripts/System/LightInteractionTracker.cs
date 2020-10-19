@@ -9,6 +9,7 @@ namespace System {
     [RequireComponent(typeof(Rigidbody2D))]
     public class LightInteractionTracker : MonoBehaviour, IInteractionTracker {
         // easy way to visualize interactions wthout dealing with unity serialization nonsense
+        // not anymore... can't serialize readonly structs, apparently
         [SerializeField] private List<InteractionEvent> history;
 
         public List<InteractionEvent> History {
@@ -21,11 +22,17 @@ namespace System {
         private void Awake() {
             History = new List<InteractionEvent>();
             InteractionObserver.OnInteractionEvent += OnInteraction;
+            InteractionObserver.OnNonPersistentGateReEnabled += OnGateReEnabled;
         }
 
         private void OnDestroy() {
             history = null;
             InteractionObserver.OnInteractionEvent -= OnInteraction;
+            InteractionObserver.OnNonPersistentGateReEnabled -= OnGateReEnabled;
+        }
+
+        private void OnGateReEnabled(Vector3 gatePos) {
+            RevertFurthestStateToGateInteraction(gatePos);
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
@@ -37,6 +44,10 @@ namespace System {
         }
 
         public void OnInteraction(Vector3 position) {
+            RevertFurthestStateToGateInteraction(position);
+        }
+
+        private void RevertFurthestStateToGateInteraction(Vector3 position) {
             for (int i = 0; i < history.Count; i++) {
                 if (history[i].SnappedPosition.Snapped() != position.Snapped()) continue;
 
@@ -45,7 +56,6 @@ namespace System {
                 gameObject.SetActive(true);
 
                 for (int j = 0; j < i + 1; j++) {
-                    print(history[j].Type);
                     if (history[j].Type != typeof(NonPersistentGate)) continue;
 
                     InteractionObserver.OnNonPersistentGateInteractionRemoved(history[j].SnappedPosition,

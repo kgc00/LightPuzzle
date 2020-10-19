@@ -26,10 +26,10 @@ namespace System.Interactions {
             if (currentInteractors.Contains(interactor)) currentInteractors.Remove(interactor);
 
             if (IsUnlocked()) return;
-            HandleGateReEnabled();
+            ReEnableGate();
         }
 
-        private void HandleGateReEnabled() {
+        private void ReEnableGate() {
             gameObject.SetActive(true);
             // TODO - have any light which passed through the gate return to it
             // use event system to trigger all lights to search for this interaction
@@ -53,6 +53,10 @@ namespace System.Interactions {
                 yield break;
             }
 
+            DisableGate();
+        }
+
+        private void DisableGate() {
             foreach (var lightInteractor in currentInteractors) {
                 GetMovement(lightInteractor).enabled = true;
             }
