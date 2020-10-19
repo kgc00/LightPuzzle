@@ -46,7 +46,8 @@ namespace System {
                     Quaternion.Euler(history[i].eulerRotation));
                 gameObject.SetActive(true);
 
-                history.RemoveRange(0, i);
+                // spawning the object on top of that position will 'regenerate' the extra event we are deleting
+                history.RemoveRange(0, i + 1);
                 break;
             }
         }
