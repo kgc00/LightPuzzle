@@ -15,6 +15,13 @@ namespace System.Interactions {
             StartCoroutine(interactable.HandleInteraction(this));
         }
 
+        private void OnCollisionEnter2D(Collision2D other) {
+            var interactable = other.gameObject.GetComponent<ILightInteractable>();
+            if (interactable == null) return;
+
+            Interact(interactable);
+        }
+
         private void OnTriggerEnter2D(Collider2D other) {
             var interactable = other.gameObject.GetComponent<ILightInteractable>();
             if (interactable == null) return;

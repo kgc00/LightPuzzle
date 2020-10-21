@@ -9,7 +9,6 @@ namespace System {
     [RequireComponent(typeof(Rigidbody2D))]
     public class LightReflect : MonoBehaviour {
         private void OnTriggerEnter2D(Collider2D other) {
-            if (other.gameObject.CompareTag(Tags.Board)) gameObject.SetActive(false);
             var surface = other.GetComponent<IReflectiveSurface>();
             if (surface == null) return;
 

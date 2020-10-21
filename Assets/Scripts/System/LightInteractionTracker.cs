@@ -21,6 +21,7 @@ namespace System {
 
         private void Awake() {
             History = new List<InteractionEvent>();
+            NonPersistentGateInteractionsRemoved = new List<(Vector3, ILightInteractor)>();
             InteractionObserver.OnInteractionEvent += OnInteraction;
             InteractionObserver.OnNonPersistentGateReEnabled += OnGateReEnabled;
         }
@@ -32,7 +33,7 @@ namespace System {
         }
 
         private void OnGateReEnabled(Vector3 gatePos) {
-            RevertFurthestStateToGateInteraction(gatePos);
+            HandleInteraction(gatePos);
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
@@ -43,27 +44,52 @@ namespace System {
             History.Insert(0, provider.TrackInteraction(this));
         }
 
+        private List<(Vector3, ILightInteractor)> NonPersistentGateInteractionsRemoved;
         public void OnInteraction(Vector3 position) {
-            RevertFurthestStateToGateInteraction(position);
+            HandleInteraction(position);
         }
 
-        private void RevertFurthestStateToGateInteraction(Vector3 position) {
-            for (int i = 0; i < history.Count; i++) {
-                if (history[i].SnappedPosition.Snapped() != position.Snapped()) continue;
-
-                gameObject.transform.SetPositionAndRotation(history[i].SnappedPosition,
-                    Quaternion.Euler(history[i].EulerRotation));
-                gameObject.SetActive(true);
-
+        private void HandleInteraction(Vector3 position) {
+            void StoreNonPersistentGateInteractions(int i) {
                 for (int j = 0; j < i + 1; j++) {
                     if (history[j].Type != typeof(NonPersistentGate)) continue;
 
-                    InteractionObserver.OnNonPersistentGateInteractionRemoved(history[j].SnappedPosition,
-                        Behaviour.GetComponent<ILightInteractor>());
-                    // spawning the object on top of that position will 'regenerate' the extra event we are deleting
-                    history.RemoveRange(0, i + 1);
+                    NonPersistentGateInteractionsRemoved.Add((history[j].SnappedPosition, Behaviour.GetComponent<ILightInteractor>()));
                     break;
                 }
+            }
+
+            void UpdateComponentStateToMatchInteraction(int i) {
+                gameObject.transform.SetPositionAndRotation(history[i].SnappedPosition,
+                    // TODO - UPDATE ROTATION TO MATCH LAST MIRROR 
+                    Quaternion.Euler(history[i].EulerRotation));
+                gameObject.SetActive(true);
+            }
+
+            void TrimOldInteractions(int i) {
+                // spawning the object on top of that position will 'regenerate' the extra event we are deleting
+                history.RemoveRange(0, i + 1);
+            }
+
+            void TriggerNonPersistentGateStateUpdates() {
+                for (int j = 0; j < NonPersistentGateInteractionsRemoved.Count; j++) {
+                    InteractionObserver.OnNonPersistentGateInteractionRemoved(NonPersistentGateInteractionsRemoved[j].Item1,
+                        NonPersistentGateInteractionsRemoved[j].Item2);
+                }
+
+                NonPersistentGateInteractionsRemoved.Clear();
+            }
+
+            for (int i = 0; i < history.Count; i++) {
+                if (history[i].SnappedPosition.Snapped() != position.Snapped()) continue;
+
+                StoreNonPersistentGateInteractions(i);
+
+                UpdateComponentStateToMatchInteraction(i);
+
+                TrimOldInteractions(i);
+
+                if (NonPersistentGateInteractionsRemoved.Count > 0) TriggerNonPersistentGateStateUpdates();
             }
         }
     }

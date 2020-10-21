@@ -93,6 +93,7 @@
             <e p="Interactions" t="Include">
               <e p="InteractableGatherer.cs" t="Include" />
               <e p="Interactor.cs" t="Include" />
+              <e p="LightCollision.cs" t="Include" />
               <e p="LightDivider.cs" t="Include" />
               <e p="LightEmitter.cs" t="Include" />
               <e p="LightInteractor.cs" t="Include" />

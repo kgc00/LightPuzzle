@@ -23,8 +23,10 @@ namespace System.Interactions {
         private void HandleInteractionRemoved(Vector3 position, ILightInteractor interactor) {
             if (position.Snapped() != transform.position.Snapped()) return;
 
-            if (currentInteractors.Contains(interactor)) currentInteractors.Remove(interactor);
-
+            if (currentInteractors.Contains(interactor)) {
+                currentInteractors.Remove(interactor);
+                GetMovement(interactor).enabled = true;
+            }
             if (IsUnlocked()) return;
             ReEnableGate();
         }
