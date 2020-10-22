@@ -60,9 +60,7 @@ namespace System {
             }
 
             void UpdateComponentStateToMatchInteraction(int i) {
-                gameObject.transform.SetPositionAndRotation(history[i].SnappedPosition,
-                    // TODO - UPDATE ROTATION TO MATCH LAST MIRROR 
-                    Quaternion.Euler(history[i].EulerRotation));
+                gameObject.transform.position = history[i].SnappedPosition;
                 gameObject.SetActive(true);
             }
 
