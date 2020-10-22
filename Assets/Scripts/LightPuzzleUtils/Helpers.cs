@@ -25,5 +25,9 @@ namespace LightPuzzleUtils {
                 ? CappedMoveVelocity()
                 : NormalMoveVelocity();
         }
+
+        // public static GameObject CloneLight(GameObject LightObject) {
+        //     
+        // }
     }
 }

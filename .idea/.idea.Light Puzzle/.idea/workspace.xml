@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="14019d30-62fd-4578-b187-ed70b99bc9a4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +22,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/Interactor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tests/Editor/Sandbox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotateInteraction.cs" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -46,13 +48,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/LightHistoryEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/ReflectiveSurface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Vector3Extensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IInteractionTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/InteractableGatherer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/InteractionObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/PersistentGate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/MirrorSurface.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/CollisionInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/CollisionInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightCollision.cs" />
@@ -68,8 +68,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightColorProvider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/NonPersistentGate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LightPuzzleUtils/Helpers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IInteractionTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightInteractionTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
       </list>
     </option>
   </component>
@@ -122,7 +125,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="61960000" />
+      <workItem from="1602964599347" duration="63119000" />
     </task>
     <servers />
   </component>
@@ -155,9 +158,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603074906610" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603249435126">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603337330902">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603249435126" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603337330902" />
   </component>
 </project>

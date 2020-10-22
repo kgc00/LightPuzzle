@@ -6,7 +6,7 @@ namespace System.Interfaces {
     public interface IInteractionTracker {
         List<InteractionEvent> History { get; }
         GameObject Behaviour { get; }
-
         void OnInteraction(Vector3 position);
+        void InitializeHistory(List<InteractionEvent> history);
     }
 }

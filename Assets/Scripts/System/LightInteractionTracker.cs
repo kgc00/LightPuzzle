@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Interactions;
 using System.Interfaces;
+using System.Linq;
 using Models;
 using UnityEngine;
 
@@ -49,6 +50,11 @@ namespace System {
             HandleInteraction(position);
         }
 
+        public void InitializeHistory(List<InteractionEvent> history) {
+            // need to copy values, rather than point to memory ref
+            this.history = history.ConvertAll(x => x);
+        }
+
         private void HandleInteraction(Vector3 position) {
             void StoreNonPersistentGateInteractions(int i) {
                 for (int j = 0; j < i + 1; j++) {
@@ -61,9 +67,9 @@ namespace System {
 
             void UpdateComponentStateToMatchInteraction(int i) {
                 gameObject.transform.position = history[i].SnappedPosition;
-                print(history[i].LightColor);
-                if (history[i].LightColor != null)
-                    gameObject.GetComponent<ILightColor>().LightColor = (LightColor) history[i].LightColor;
+                // print(history[i].LightColor);
+                // if (history[i].LightColor != null)
+                //     gameObject.GetComponent<ILightColor>().LightColor = (LightColor) history[i].LightColor;
                 gameObject.SetActive(true);
             }
 

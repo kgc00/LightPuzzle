@@ -22,6 +22,9 @@ namespace System.Interactions {
         }
 
         private void SpawnLight(ILightInteractor interactor) {
+            var lightHistory = interactor.Behaviour.GetComponent<IInteractionTracker>().History;
+            var lightColor = interactor.Behaviour.GetComponent<ILightColor>().LightColor;
+            
             Vector3 spawnPos = transform.position + transform.up * 1.1f;
             var spawnNegPos = transform.position + (transform.up * -1.1f);
             spawnPos.z = 0f;
@@ -29,9 +32,13 @@ namespace System.Interactions {
 
             var lightInstance = Instantiate(lightPrefab, spawnPos, GetLightRotationPositive());
             lightInstance.transform.SetParent(transform);
+            lightInstance.GetComponent<IInteractionTracker>().InitializeHistory(lightHistory);
+            lightInstance.GetComponent<ILightColor>().LightColor = lightColor;
             
             var otherLightInstance = Instantiate(lightPrefab, spawnNegPos, GetLightRotationNegative());
             otherLightInstance.transform.SetParent(transform);
+            otherLightInstance.GetComponent<IInteractionTracker>().InitializeHistory(lightHistory);
+            otherLightInstance.GetComponent<ILightColor>().LightColor = lightColor;
         }
 
         private Quaternion GetLightRotationPositive() => Quaternion.Euler(transform.eulerAngles);
