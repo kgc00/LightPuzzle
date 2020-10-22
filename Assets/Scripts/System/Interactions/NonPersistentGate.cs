@@ -74,9 +74,5 @@ namespace System.Interactions {
         public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
             return new InteractionEvent(transform, GetType());
         }
-
-        private void OnGUI() {
-            GUILayout.Box($"interactors: {currentInteractors.Count}");
-        }
     }
 }

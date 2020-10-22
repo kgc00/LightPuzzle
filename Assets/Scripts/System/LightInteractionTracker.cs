@@ -61,6 +61,9 @@ namespace System {
 
             void UpdateComponentStateToMatchInteraction(int i) {
                 gameObject.transform.position = history[i].SnappedPosition;
+                print(history[i].LightColor);
+                if (history[i].LightColor != null)
+                    gameObject.GetComponent<ILightColor>().LightColor = (LightColor) history[i].LightColor;
                 gameObject.SetActive(true);
             }
 

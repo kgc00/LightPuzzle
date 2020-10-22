@@ -107,6 +107,8 @@
               <e p="IInteractionHistoryProvider.cs" t="Include" />
               <e p="IInteractionTracker.cs" t="Include" />
               <e p="IInteractor.cs" t="Include" />
+              <e p="ILightColor.cs" t="Include" />
+              <e p="ILightColorProvider.cs" t="Include" />
               <e p="ILightInteractable.cs" t="Include" />
               <e p="ILightInteractor.cs" t="Include" />
               <e p="IReflectiveSurface.cs" t="Include" />

@@ -19,12 +19,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Input/PlayerActions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LightPuzzleUtils/Helpers.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Movement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IInteractor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/InteractableGatherer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/Interactor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tests/Editor/Sandbox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotateInteraction.cs" />
@@ -37,12 +31,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/ILightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Color.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/ColorType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/LightColor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/SoftUnlockable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/SoftGate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightDivider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IReflectiveSurface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ITrackInteractions.cs" />
@@ -60,15 +52,23 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/InteractionObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/PersistentGate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/MirrorSurface.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/InteractionEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/CollisionInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/CollisionInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightReflect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/LightColor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/InteractionEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightColorInteractor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightColor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IColorLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/LightColor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/ProviderEmitter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightColorProvider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/NonPersistentGate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightInteractionTracker.cs" />
       </list>
     </option>
@@ -122,7 +122,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="59594000" />
+      <workItem from="1602964599347" duration="61960000" />
     </task>
     <servers />
   </component>
@@ -147,10 +147,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="184" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602984031830" />
-    <state x="736" y="216" width="678" height="652" key="find.popup" timestamp="1603252841572">
+    <state x="736" y="216" width="678" height="652" key="find.popup" timestamp="1603336940585">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="736" y="216" width="678" height="652" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603252841572" />
+    <state x="736" y="216" width="678" height="652" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603336940585" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1603074906610">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

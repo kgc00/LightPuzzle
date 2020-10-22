@@ -7,13 +7,15 @@ using UnityEngine;
 namespace System.Interactions {
     [RequireComponent(typeof(BoxCollider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
-    public class LightEmitter : MonoBehaviour, IInteractable, IInteractionHistoryProvider {
+    public class LightEmitter : MonoBehaviour, IInteractable, IInteractionHistoryProvider, ILightColorProvider {
         public bool repeat;
         private bool emitting;
         [SerializeField] private GameObject lightPrefab;
         private GameObject lightInstance;
         private const float Lifetime = 2f;
         private bool active = true;
+        [SerializeField] private LightColor colorToProvide;
+        public LightColor ColorToProvide => colorToProvide;
 
         private void Start() {
             StartCoroutine(SpawnLight());
@@ -28,6 +30,7 @@ namespace System.Interactions {
             Destroy(lightInstance);
             lightInstance = Instantiate(lightPrefab, spawnPos, GetLightRotation());
             lightInstance.transform.SetParent(transform);
+            lightInstance.GetComponent<LightInteractor>().LightColor = colorToProvide;
 
             yield return new WaitForSeconds(Lifetime);
 
@@ -52,8 +55,11 @@ namespace System.Interactions {
         }
 
         public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
-            return new InteractionEvent(transform, GetType());
+            return new InteractionEvent(transform, GetType(), colorToProvide);
+        }
 
+        public void SetLightColor(ILightColor light) {
+            light.LightColor = ColorToProvide;
         }
     }
 }

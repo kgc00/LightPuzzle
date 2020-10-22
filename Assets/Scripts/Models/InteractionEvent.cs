@@ -9,14 +9,17 @@ namespace Models {
         public  Vector3 EulerRotation;
         public  string Name;
 
-        public  Type Type;
         // can use typeref to visualize in inspector
+        public  Type Type;
 
-        public InteractionEvent(Transform transform, Type interactionType) {
+        public LightColor? LightColor;
+
+        public InteractionEvent(Transform transform, Type interactionType, LightColor? newColor = null) {
             SnappedPosition = transform.position.Snapped();
             EulerRotation = transform.rotation.eulerAngles;
             Name = transform.name;
             Type = interactionType;
+            LightColor = newColor;
         }
     }
 }

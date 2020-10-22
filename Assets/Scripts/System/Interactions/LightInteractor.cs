@@ -5,12 +5,11 @@ using UnityEngine;
 namespace System.Interactions {
     [RequireComponent(typeof(CircleCollider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
-    public class LightInteractor : MonoBehaviour, ILightInteractor {
+    public class LightInteractor : MonoBehaviour, ILightInteractor, ILightColor {
         public GameObject Behaviour { get; private set; }
-        public LightColor Color { get; private set; } = LightColor.White;
-
+        public LightColor LightColor { get; set; }
         private void Awake() => Behaviour = gameObject;
-
+        
         public void Interact(ILightInteractable interactable) {
             StartCoroutine(interactable.HandleInteraction(this));
         }
@@ -27,6 +26,10 @@ namespace System.Interactions {
             if (interactable == null) return;
 
             Interact(interactable);
+        }
+
+        private void OnGUI() {
+            GUILayout.Box(LightColor.ToString());
         }
     }
 }
