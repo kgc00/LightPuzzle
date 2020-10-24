@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace System.Interactions {
     public class MirrorSurface : MonoBehaviour, IReflectiveSurface, IInteractionHistoryProvider {
+        [field: SerializeField] public readonly string ReadOnlyTest = "Guh";
         public IEnumerator Reflect(LightReflect light) {
             while (Vector3.Distance(light.transform.position, transform.position) > .05f) {
                 yield return new WaitForEndOfFrame();

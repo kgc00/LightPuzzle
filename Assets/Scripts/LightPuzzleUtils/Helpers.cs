@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Models;
+using UnityEngine;
 
 namespace LightPuzzleUtils {
     public static class Helpers {
@@ -26,6 +27,8 @@ namespace LightPuzzleUtils {
                 : NormalMoveVelocity();
         }
 
+        public static Vector3 SnappedCollisionPosFromInteractorPos(Transform transform) =>
+            (transform.position.Snapped() + transform.up * 1).Snapped();
         // public static GameObject CloneLight(GameObject LightObject) {
         //     
         // }

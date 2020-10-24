@@ -18,7 +18,8 @@ namespace System.Interactions {
                 if (Vector3.Distance(transform.position, interactor.Behaviour.transform.position) > 1.5f) yield break;
             }
             SpawnLight(interactor);
-            Destroy(interactor.Behaviour);
+
+            interactor.HandleDeactivation(this);
         }
 
         private void SpawnLight(ILightInteractor interactor) {
@@ -47,7 +48,6 @@ namespace System.Interactions {
         
         public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
             return new InteractionEvent(transform, GetType());
-
         }
     }
 }

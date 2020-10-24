@@ -14,6 +14,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Models/Point.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/81986B7D-E77F-470C-8157-A969000B3A00/e9/71a1c77b/CircleCollider2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity/Tile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CC8EC07-5538-4164-96E5-DB5D391208AC/df/2b4892c5/SerializeField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/Editor/Sandbox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B17F35B0-8B86-4A3C-A09A-7032B437596E/82/0b91dcbc/Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CC8EC07-5538-4164-96E5-DB5D391208AC/a1/2f9dce93/Transform.cs" root0="SKIP_HIGHLIGHTING" />
@@ -22,12 +23,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tests/Editor/Sandbox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotateInteraction.cs" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entity/ForwardFacing.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Tags.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/ILightInteractor.cs" />
@@ -50,29 +45,35 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Vector3Extensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/InteractableGatherer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/InteractionObserver.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/PersistentGate.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/MirrorSurface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/CollisionInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/CollisionInteraction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightReflect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/LightColor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/InteractionEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightColorInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightColor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IColorLight.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightColor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/ProviderEmitter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightColorProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/NonPersistentGate.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LightPuzzleUtils/Helpers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IInteractionTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/SerializeProperty.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/MirrorSurface.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/Intera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/PropertyDrawerUtility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/InteractionEventDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/InteractionEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LightPuzzleUtils/Helpers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/NonPersistentGate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/PersistentGate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/InteractionObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightInteractionTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/InteractionObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractionTracker.cs" />
       </list>
     </option>
   </component>
@@ -107,10 +108,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23172">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="23172" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -125,7 +126,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="63119000" />
+      <workItem from="1602964599347" duration="77922000" />
     </task>
     <servers />
   </component>
@@ -142,6 +143,38 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="846" y="266" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602974292117" />
+    <state width="1877" height="390" key="GridCell.Tab.0.bottom" timestamp="1603569472711">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603569472711" />
+    <state width="1877" height="390" key="GridCell.Tab.0.center" timestamp="1603569472711">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603569472711" />
+    <state width="1877" height="390" key="GridCell.Tab.0.left" timestamp="1603569472711">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603569472711" />
+    <state width="1877" height="390" key="GridCell.Tab.0.right" timestamp="1603569472711">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603569472711" />
+    <state width="1877" height="390" key="GridCell.Tab.1.bottom" timestamp="1603569739252">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603569739252" />
+    <state width="1877" height="390" key="GridCell.Tab.1.center" timestamp="1603569739251">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603569739251" />
+    <state width="1877" height="390" key="GridCell.Tab.1.left" timestamp="1603569739251">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603569739251" />
+    <state width="1877" height="390" key="GridCell.Tab.1.right" timestamp="1603569739251">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603569739251" />
     <state x="794" y="241" key="RiderGenerateDialog" timestamp="1603248686383">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -150,17 +183,17 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="184" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602984031830" />
-    <state x="736" y="216" width="678" height="652" key="find.popup" timestamp="1603336940585">
+    <state x="736" y="216" width="678" height="652" key="find.popup" timestamp="1603564331059">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="736" y="216" width="678" height="652" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603336940585" />
+    <state x="736" y="216" width="678" height="652" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603564331059" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1603074906610">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603074906610" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603337330902">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603568614918">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603337330902" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603568614918" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Interfaces;
+using LightPuzzleUtils;
 using Models;
 using UnityEngine;
 
@@ -71,8 +72,11 @@ namespace System.Interactions {
 
         private bool IsUnlocked() => currentInteractors.Count > 1;
 
-        public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
-            return new InteractionEvent(transform, GetType());
-        }
+        public InteractionEvent TrackInteraction(IInteractionTracker tracker) =>
+            new InteractionEvent(Helpers.SnappedCollisionPosFromInteractorPos(tracker.Behaviour.transform),
+                tracker.Behaviour.transform.eulerAngles,
+                transform.position.Snapped(),
+                name,
+                GetType());
     }
 }
