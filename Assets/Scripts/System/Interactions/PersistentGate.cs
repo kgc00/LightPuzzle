@@ -10,6 +10,11 @@ namespace System.Interactions {
     [RequireComponent(typeof(Rigidbody2D))]
     public class PersistentGate : MonoBehaviour, ILightInteractable, IInteractionHistoryProvider {
         private List<ILightInteractor> interactors;
+        private BoxCollider2D boxCollider2D;
+
+        private void Awake() {
+            boxCollider2D = GetComponent<BoxCollider2D>();
+        }
 
         private void OnEnable() {
             interactors = new List<ILightInteractor>();
@@ -30,7 +35,9 @@ namespace System.Interactions {
         }
 
         public IEnumerator HandleInteraction(ILightInteractor interactor) {
-            while (Vector3.Distance(interactor.Behaviour.transform.position, transform.position) > .05f) {
+            var collisionPos = Helpers.GetMultiCellSnappedCollisionPos(interactor.Behaviour.transform, boxCollider2D);
+
+            while (Vector3.Distance(interactor.Behaviour.transform.position, collisionPos) > .05f) {
                 yield return new WaitForEndOfFrame();
             }
             

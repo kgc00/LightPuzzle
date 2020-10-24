@@ -10,10 +10,12 @@ namespace System.Interactions {
     [RequireComponent(typeof(Rigidbody2D))]
     public class NonPersistentGate : MonoBehaviour, ILightInteractable, IInteractionHistoryProvider {
         private List<ILightInteractor> currentInteractors;
+        private BoxCollider2D boxCollider2D;
 
         private void Awake() {
             InteractionObserver.OnNonPersistentGateInteractionRemoved += HandleInteractionRemoved;
             currentInteractors = new List<ILightInteractor>();
+            boxCollider2D = GetComponent<BoxCollider2D>();
         }
 
         private void OnDestroy() {
@@ -21,13 +23,14 @@ namespace System.Interactions {
             currentInteractors = null;
         }
 
-        private void HandleInteractionRemoved(Vector3 position, ILightInteractor interactor) {
-            if (position.Snapped() != transform.position.Snapped()) return;
+        private void HandleInteractionRemoved(Vector3 interactableSnappedPos, ILightInteractor interactor) {
+            if (interactableSnappedPos.Snapped() != transform.position.Snapped()) return;
 
             if (currentInteractors.Contains(interactor)) {
                 currentInteractors.Remove(interactor);
                 GetMovement(interactor).enabled = true;
             }
+
             if (IsUnlocked()) return;
             ReEnableGate();
         }
@@ -43,7 +46,9 @@ namespace System.Interactions {
         // if type -- nonpersistentgate, fire off event to remove light from currentInteractors
 
         public IEnumerator HandleInteraction(ILightInteractor interactor) {
-            while (Vector3.Distance(interactor.Behaviour.transform.position, transform.position) > .05f) {
+            var collisionPos = Helpers.GetMultiCellSnappedCollisionPos(interactor.Behaviour.transform, boxCollider2D);
+
+            while (Vector3.Distance(interactor.Behaviour.transform.position, collisionPos) > .05f) {
                 yield return new WaitForEndOfFrame();
             }
 

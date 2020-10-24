@@ -23,7 +23,7 @@ namespace System.Interactions {
         private void Awake() {
             History = new List<InteractionEvent>();
             NonPersistentGateInteractionsRemoved =
-                new List<(Vector3 interactorSnappedPosition, ILightInteractor lightInteractor)>();
+                new List<(Vector3 interactableSnappedPosition, ILightInteractor lightInteractor)>();
             DividerInteractionsRemoved = new List<(Vector3 interactableSnappedPosition, ILightInteractor lightInteractor)>();
             InteractionObserver.OnInteractionEvent += OnInteraction;
             InteractionObserver.OnNonPersistentGateReEnabled += OnGateReEnabled;
@@ -62,7 +62,7 @@ namespace System.Interactions {
             this.History = history.ConvertAll(x => x);
         }
 
-        private void HandleInteraction(Vector3 position) {
+        private void HandleInteraction(Vector3 interactionOccurancePosition) {
             void StoreNonPersistentGateInteractions(int i) {
                 for (int j = 0; j < i + 1; j++) {
                     if (History[j].Type != typeof(NonPersistentGate)) continue;
@@ -110,7 +110,6 @@ namespace System.Interactions {
 
             void HandleDividerStateUpdates() {
                 for (int k = 0; k < DividerInteractionsRemoved.Count; k++) {
-                    print("Calling with k " + k);
                     InteractionObserver.OnDividerInteractionRemoved(
                         DividerInteractionsRemoved[k].interactableSnappedPosition,
                         DividerInteractionsRemoved[k].lightInteractor);
@@ -120,7 +119,7 @@ namespace System.Interactions {
             }
 
             for (int i = 0; i < History.Count; i++) {
-                if (History[i].InteractorSnappedPosition.Snapped() != position.Snapped()) continue;
+                if (History[i].InteractableSnappedPosition.Snapped() != interactionOccurancePosition.Snapped()) continue;
 
                 StoreNonPersistentGateInteractions(i);
                 StoreDividerInteractions(i);
@@ -135,7 +134,7 @@ namespace System.Interactions {
         }
 
         public void HandleDeactivation(LightDivider lightDivider) {
-            Debug.Assert(History[0].GetType() == lightDivider.GetType());
+            Debug.Assert(History[0].Type == lightDivider.GetType());
             History.RemoveAt(0);
         }
     }

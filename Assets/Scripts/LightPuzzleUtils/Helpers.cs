@@ -29,8 +29,10 @@ namespace LightPuzzleUtils {
 
         public static Vector3 SnappedCollisionPosFromInteractorPos(Transform transform) =>
             (transform.position.Snapped() + transform.up * 1).Snapped();
-        // public static GameObject CloneLight(GameObject LightObject) {
-        //     
-        // }
+        
+        public static Vector3 GetMultiCellSnappedCollisionPos(Transform transform, BoxCollider2D collider2D) =>
+            collider2D.bounds.Contains(transform.position)
+                ? transform.position.Snapped()
+                : SnappedCollisionPosFromInteractorPos(transform);
     }
 }
