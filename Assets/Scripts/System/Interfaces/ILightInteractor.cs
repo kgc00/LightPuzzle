@@ -7,5 +7,7 @@ namespace System.Interfaces {
         GameObject Behaviour { get; }
         void Interact(ILightInteractable interactable);
         void HandleDeactivation(LightDivider lightDivider);
+        void HandleBlockedInteraction();
+        void HandleUnblockedInteraction();
     }
 }

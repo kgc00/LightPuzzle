@@ -98,6 +98,7 @@
               <e p="LightEmitter.cs" t="Include" />
               <e p="LightInteractionTracker.cs" t="Include" />
               <e p="LightInteractor.cs" t="Include" />
+              <e p="LightWallCollision.cs" t="Include" />
               <e p="MirrorSurface.cs" t="Include" />
               <e p="NonPersistentGate.cs" t="Include" />
               <e p="PersistentGate.cs" t="Include" />
@@ -112,10 +113,9 @@
               <e p="ILightColorProvider.cs" t="Include" />
               <e p="ILightInteractable.cs" t="Include" />
               <e p="ILightInteractor.cs" t="Include" />
-              <e p="IReflectiveSurface.cs" t="Include" />
             </e>
             <e p="LightMovement.cs" t="Include" />
-            <e p="LightReflect.cs" t="Include" />
+            <e p="LightTrailRenderer.cs" t="Include" />
             <e p="Movement.cs" t="Include" />
             <e p="SetVirtualCamFollowTarget.cs" t="Include" />
           </e>

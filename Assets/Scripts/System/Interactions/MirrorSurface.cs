@@ -4,19 +4,18 @@ using Models;
 using UnityEngine;
 
 namespace System.Interactions {
-    public class MirrorSurface : MonoBehaviour, IReflectiveSurface, IInteractionHistoryProvider {
-        [field: SerializeField] public readonly string ReadOnlyTest = "Guh";
-        public IEnumerator Reflect(LightReflect light) {
-            while (Vector3.Distance(light.transform.position, transform.position) > .05f) {
+    public class MirrorSurface : MonoBehaviour, ILightInteractable, IInteractionHistoryProvider {
+        public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
+            return new InteractionEvent(transform, GetType());
+        }
+
+        public IEnumerator HandleInteraction(ILightInteractor interactor) {
+            while (Vector3.Distance(interactor.Behaviour.transform.position, transform.position) > .05f) {
                 yield return new WaitForEndOfFrame();
             }
 
-            light.transform.SetPositionAndRotation(transform.position, transform.rotation);
-        }
-
-        public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
-            return new InteractionEvent(transform, GetType());
-
+            interactor.Behaviour.transform.SetPositionAndRotation(transform.position.Snapped(), transform.rotation);
+            interactor.HandleUnblockedInteraction();
         }
     }
 }

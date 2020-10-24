@@ -5,17 +5,18 @@ using LightPuzzleUtils;
 using Models;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace System.Interactions {
-    [RequireComponent(typeof(BoxCollider2D))]
-    public class LightCollision : MonoBehaviour, ILightInteractable, IInteractionHistoryProvider {
-        private BoxCollider2D boxCollider2D;
+    [RequireComponent(typeof(TilemapCollider2D))]
+    public class LightWallCollision : MonoBehaviour, ILightInteractable, IInteractionHistoryProvider {
+        private TilemapCollider2D tilemapCollider2D;
         private void Awake() {
-            boxCollider2D = GetComponent<BoxCollider2D>();
+            tilemapCollider2D = GetComponent<TilemapCollider2D>();
         }
 
         public IEnumerator HandleInteraction(ILightInteractor interactor) {
-            var collisionPos = Helpers.GetMultiCellSnappedCollisionPos(interactor.Behaviour.transform, boxCollider2D);
+            var collisionPos = Helpers.SnappedCollisionPosFromInteractorPos(interactor.Behaviour.transform);
 
             while (Vector3.Distance(interactor.Behaviour.transform.position, collisionPos) > .05f) {
                 yield return new WaitForEndOfFrame();

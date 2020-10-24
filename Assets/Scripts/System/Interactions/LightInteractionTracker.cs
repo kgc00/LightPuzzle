@@ -7,6 +7,7 @@ using UnityEngine;
 namespace System.Interactions {
     [RequireComponent(typeof(CircleCollider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(LightInteractor))]
     public class LightInteractionTracker : MonoBehaviour, IInteractionTracker {
         [field: SerializeField] public List<InteractionEvent> History { get; private set; }
 
@@ -84,13 +85,7 @@ namespace System.Interactions {
             }
 
             void UpdateComponentStateToMatchInteraction(int i) {
-                // if(History[i].Type == typeof(LightDivider)) Destroy(gameObject);
-                
                 gameObject.transform.position = History[i].InteractorSnappedPosition;
-                // print(history[i].LightColor);
-                // if (history[i].LightColor != null)
-                //     gameObject.GetComponent<ILightColor>().LightColor = (LightColor) history[i].LightColor;
-                gameObject.SetActive(true);
             }
 
             void TrimOldInteractions(int i) {

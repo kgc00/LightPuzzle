@@ -7,6 +7,7 @@ namespace System.Interactions {
     [RequireComponent(typeof(CircleCollider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(LightInteractionTracker))]
+    [RequireComponent(typeof(LightMovement))]
     public class LightInteractor : MonoBehaviour, ILightInteractor, ILightColor {
         public GameObject Behaviour { get; private set; }
         
@@ -21,6 +22,14 @@ namespace System.Interactions {
         public void HandleDeactivation(LightDivider lightDivider) {
             GetComponent<LightInteractionTracker>().HandleDeactivation(lightDivider);
             gameObject.SetActive(false);
+        }
+
+        public void HandleBlockedInteraction() {
+            GetComponent<LightMovement>().enabled = false;
+        }
+
+        public void HandleUnblockedInteraction() {
+            GetComponent<LightMovement>().enabled = true;
         }
 
         private void OnCollisionEnter2D(Collision2D other) {

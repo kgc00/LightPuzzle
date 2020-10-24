@@ -28,7 +28,7 @@ namespace System.Interactions {
 
             if (currentInteractors.Contains(interactor)) {
                 currentInteractors.Remove(interactor);
-                GetMovement(interactor).enabled = true;
+                interactor.HandleUnblockedInteraction();
             }
 
             if (IsUnlocked()) return;
@@ -57,7 +57,7 @@ namespace System.Interactions {
             if (!currentInteractors.Contains(interactor)) currentInteractors.Add(interactor);
 
             if (!IsUnlocked()) {
-                GetMovement(interactor).enabled = false;
+                interactor.HandleBlockedInteraction();
                 yield break;
             }
 
