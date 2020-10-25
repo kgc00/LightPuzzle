@@ -11,6 +11,8 @@ namespace System.Interactions {
     public class NonPersistentGate : MonoBehaviour, ILightInteractable, IInteractionHistoryProvider {
         private List<ILightInteractor> currentInteractors;
         private BoxCollider2D boxCollider2D;
+        private Vector3 collisionPos = Vector3.zero;
+        private Vector3 interactorPos = Vector3.zero;
 
         private void Awake() {
             InteractionObserver.OnNonPersistentGateInteractionRemoved += HandleInteractionRemoved;
@@ -37,16 +39,14 @@ namespace System.Interactions {
 
         private void ReEnableGate() {
             gameObject.SetActive(true);
-            // TODO - have any light which passed through the gate return to it
-            // use event system to trigger all lights to search for this interaction
             InteractionObserver.OnNonPersistentGateReEnabled(transform.position.Snapped());
         }
 
         // when a light's history is updated, it needs to search discarded interaction...
         // if type -- nonpersistentgate, fire off event to remove light from currentInteractors
-
         public IEnumerator HandleInteraction(ILightInteractor interactor) {
-            var collisionPos = Helpers.GetMultiCellSnappedCollisionPos(interactor.Behaviour.transform, boxCollider2D);
+            interactorPos = interactor.Behaviour.transform.position.Snapped();
+            collisionPos = Helpers.GetMultiCellSnappedCollisionPos(interactor.Behaviour.transform, boxCollider2D);
 
             while (Vector3.Distance(interactor.Behaviour.transform.position, collisionPos) > .05f) {
                 yield return new WaitForEndOfFrame();
@@ -77,11 +77,25 @@ namespace System.Interactions {
 
         private bool IsUnlocked() => currentInteractors.Count > 1;
 
-        public InteractionEvent TrackInteraction(IInteractionTracker tracker) =>
-            new InteractionEvent(Helpers.SnappedCollisionPosFromInteractorPos(tracker.Behaviour.transform),
-                tracker.Behaviour.transform.eulerAngles,
-                transform.position.Snapped(),
-                name,
-                GetType());
+        public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
+            if (boxCollider2D.bounds.size.magnitude > Vector3.one.magnitude) {
+                return new InteractionEvent(
+                    Helpers.GetMultiCellSnappedCollisionPos(tracker.Behaviour.transform, boxCollider2D),
+                    tracker.Behaviour.transform.eulerAngles,
+                    transform.position.Snapped(),
+                    name,
+                    GetType());
+            }else {
+                return new InteractionEvent(
+                    transform,
+                    GetType());
+            }
+            
+        }
+
+        private void OnDrawGizmos() {
+            Gizmos.DrawSphere(collisionPos, 0.25f);
+            Gizmos.DrawWireSphere(interactorPos, 0.25f);
+        }
     }
 }

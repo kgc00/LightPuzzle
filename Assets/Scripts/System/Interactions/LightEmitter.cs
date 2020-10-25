@@ -27,7 +27,7 @@ namespace System.Interactions {
         private IEnumerator SpawnLight() {
             if (!active) yield break;
 
-            Vector3 spawnPos = transform.position + transform.up;
+            Vector3 spawnPos = transform.position;
             spawnPos.z = 0f;
 
             Destroy(lightInstance);

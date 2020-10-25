@@ -16,18 +16,18 @@ namespace System.Interactions {
         }
 
         public IEnumerator HandleInteraction(ILightInteractor interactor) {
-            var collisionPos = Helpers.SnappedCollisionPosFromInteractorPos(interactor.Behaviour.transform);
+            var collisionPos = Helpers.GetMultiCellSnappedCollisionPos(interactor.Behaviour.transform, tilemapCollider2D);
 
             while (Vector3.Distance(interactor.Behaviour.transform.position, collisionPos) > .05f) {
                 yield return new WaitForEndOfFrame();
             }
+            
             interactor.HandleBlockedInteraction();
-            yield break;
         }
 
 
         public InteractionEvent TrackInteraction(IInteractionTracker tracker) =>
-            new InteractionEvent(Helpers.SnappedCollisionPosFromInteractorPos(tracker.Behaviour.transform),
+            new InteractionEvent(Helpers.GetMultiCellSnappedCollisionPos(tracker.Behaviour.transform, tilemapCollider2D),
                 tracker.Behaviour.transform.eulerAngles,
                 transform.position.Snapped(),
                 name,

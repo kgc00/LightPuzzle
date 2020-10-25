@@ -55,16 +55,18 @@ namespace LightPuzzleUtils {
         }
 
         public static Vector3 SnappedCollisionPosFromInteractorPos(Transform transform) =>
-            (transform.position.Snapped() + transform.up * 1).Snapped();
+            (transform.position.Snapped() + transform.up * 0.5f).Snapped();
 
         public static Vector3 GetMultiCellSnappedCollisionPos(Transform transform, TilemapCollider2D collider2D) =>
             collider2D.bounds.Contains(transform.position)
                 ? transform.position.Snapped()
                 : SnappedCollisionPosFromInteractorPos(transform);
 
-        public static Vector3 GetMultiCellSnappedCollisionPos(Transform transform, BoxCollider2D collider2D) =>
-            collider2D.bounds.Contains(transform.position)
+        public static Vector3 GetMultiCellSnappedCollisionPos(Transform transform, BoxCollider2D collider2D) {
+            Debug.Log(collider2D.bounds.Contains(transform.position));
+            return collider2D.bounds.Contains(transform.position)
                 ? transform.position.Snapped()
                 : SnappedCollisionPosFromInteractorPos(transform);
+        }
     }
 }

@@ -10,10 +10,15 @@ namespace System.Interactions {
     [RequireComponent(typeof(LightMovement))]
     public class LightInteractor : MonoBehaviour, ILightInteractor {
         public GameObject Behaviour { get; private set; }
+        public Coroutine currentInteraction { get;private set; }
         private void Awake() => Behaviour = gameObject;
 
+        public void StopAllCR() {
+            StopAllCoroutines();
+        }
+
         public void Interact(ILightInteractable interactable) {
-            StartCoroutine(interactable.HandleInteraction(this));
+            currentInteraction = StartCoroutine(interactable.HandleInteraction(this));
         }
 
         public void HandleDeactivation(LightDivider lightDivider) {

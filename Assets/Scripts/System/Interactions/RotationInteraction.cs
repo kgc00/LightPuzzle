@@ -6,15 +6,16 @@ using UnityEngine;
 
 namespace System.Interactions {
     public class RotationInteraction : MonoBehaviour, IInteractable {
-        private bool rotating;
+        public bool Rotating { get; private set; }
         private int rotationModifer = 1;
         private float RotationAmount => 180 * rotationModifer;
         public const float Duration = 0.5f;
 
         public IEnumerator HandleInteraction() {
-            if (rotating) yield break;
+            if (Rotating) yield break;
 
-            rotating = true;
+
+            Rotating = true;
 
             var sequence = DOTween.Sequence();
 
@@ -22,15 +23,16 @@ namespace System.Interactions {
                 gameObject.transform
                     .DORotate(GetNewEuler(), Duration)
                     .SetEase(Ease.OutSine)
-            ).AppendCallback(EndRotation);
+                )
+                .AppendCallback(EndRotation);
 
             sequence.Play();
         }
 
         private void EndRotation() {
-            rotating = false;
-            FlipRotationDirection();
             InteractionObserver.OnInteractionEvent(transform.position.Snapped());
+            Rotating = false;
+            FlipRotationDirection();
         }
 
         private Vector3 GetNewEuler() =>
