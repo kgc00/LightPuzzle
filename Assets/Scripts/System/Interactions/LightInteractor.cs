@@ -8,20 +8,21 @@ namespace System.Interactions {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(LightInteractionTracker))]
     [RequireComponent(typeof(LightMovement))]
-    public class LightInteractor : MonoBehaviour, ILightInteractor, ILightColor {
+    public class LightInteractor : MonoBehaviour, ILightInteractor {
         public GameObject Behaviour { get; private set; }
-        
-        [field: SerializeField]
-        public LightColor LightColor { get; set; }
         private void Awake() => Behaviour = gameObject;
-        
+
         public void Interact(ILightInteractable interactable) {
             StartCoroutine(interactable.HandleInteraction(this));
         }
 
         public void HandleDeactivation(LightDivider lightDivider) {
             GetComponent<LightInteractionTracker>().HandleDeactivation(lightDivider);
-            gameObject.SetActive(false);
+            HandleBlockedInteraction();
+        }
+
+        public void HandleReactivation() {
+            gameObject.SetActive(true);
         }
 
         public void HandleBlockedInteraction() {
@@ -44,10 +45,6 @@ namespace System.Interactions {
             if (interactable == null) return;
 
             Interact(interactable);
-        }
-
-        private void OnGUI() {
-            GUILayout.Box(LightColor.ToString());
         }
     }
 }

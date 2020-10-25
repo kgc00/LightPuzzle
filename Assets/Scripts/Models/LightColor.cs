@@ -4,7 +4,8 @@
         Yellow,
         Blue,
         Green,
-        Red
+        Red,
+        Magenta
     }
     // public Nullable<LightColor> OptionColor where T :
 }

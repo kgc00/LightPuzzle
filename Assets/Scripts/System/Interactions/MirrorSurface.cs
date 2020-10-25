@@ -16,6 +16,7 @@ namespace System.Interactions {
 
             interactor.Behaviour.transform.SetPositionAndRotation(transform.position.Snapped(), transform.rotation);
             interactor.HandleUnblockedInteraction();
+            interactor.HandleReactivation();
         }
     }
 }

@@ -2,6 +2,7 @@
 
 namespace System.Interfaces {
     public interface ILightColor {
-        LightColor LightColor { get; set; }
+        LightColor LightColor { get; }
+        void UpdateLightColor(LightColor colorToProvide);
     }
 }

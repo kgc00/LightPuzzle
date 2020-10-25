@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Interfaces;
+using LightPuzzleUtils;
 using Models;
 using UnityEngine;
 
 namespace System.Interactions {
     [RequireComponent(typeof(BoxCollider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
-    public class LightEmitter : MonoBehaviour, IInteractable, IInteractionHistoryProvider, ILightColorProvider {
+    public class LightEmitter : MonoBehaviour, IInteractable, IInteractionHistoryProvider {
         public bool repeat;
         private bool emitting;
         [SerializeField] private GameObject lightPrefab;
@@ -19,6 +20,8 @@ namespace System.Interactions {
 
         private void Start() {
             StartCoroutine(SpawnLight());
+            var renderer = GetComponent<SpriteRenderer>();
+            renderer.color = Helpers.ColorFromLightColor(colorToProvide);
         }
 
         private IEnumerator SpawnLight() {
@@ -30,7 +33,7 @@ namespace System.Interactions {
             Destroy(lightInstance);
             lightInstance = Instantiate(lightPrefab, spawnPos, GetLightRotation());
             lightInstance.transform.SetParent(transform);
-            lightInstance.GetComponent<LightInteractor>().LightColor = colorToProvide;
+            lightInstance.GetComponent<ILightColor>().UpdateLightColor(colorToProvide);
 
             yield return new WaitForSeconds(Lifetime);
 
@@ -56,10 +59,6 @@ namespace System.Interactions {
 
         public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
             return new InteractionEvent(transform, GetType(), colorToProvide);
-        }
-
-        public void SetLightColor(ILightColor light) {
-            light.LightColor = ColorToProvide;
         }
     }
 }

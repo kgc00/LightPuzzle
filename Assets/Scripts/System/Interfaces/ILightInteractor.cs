@@ -9,5 +9,6 @@ namespace System.Interfaces {
         void HandleDeactivation(LightDivider lightDivider);
         void HandleBlockedInteraction();
         void HandleUnblockedInteraction();
+        void HandleReactivation();
     }
 }
