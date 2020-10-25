@@ -66,13 +66,9 @@ namespace System.Interactions {
 
         private void HandleInteraction(Vector3 interactionOccurancePosition) {
             void StoreNonPersistentGateInteractions(int i) {
-                for (int j = 0; j < i + 1; j++) {                    
-                    print(j);
-                    print("CHECKING FOR  " + History[j].InteractableSnappedPosition + " @ " + History[j].Type);
-
+                for (int j = 0; j < i + 1; j++) {
                     if (History[j].Type != typeof(NonPersistentGate)) continue;
     
-                    print("ADDING NON PERS @ POS " + History[j].InteractableSnappedPosition);
                     NonPersistentGateInteractionsRemoved.Add((History[j].InteractableSnappedPosition,
                         Behaviour.GetComponent<ILightInteractor>()));
                 }
