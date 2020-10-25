@@ -36,6 +36,7 @@
             <e p="Actor.cs" t="Include" />
             <e p="EntityBase.cs" t="Include" />
             <e p="ForwardFacing.cs" t="Include" />
+            <e p="Singleton.cs" t="Include" />
             <e p="Tile.cs" t="Include" />
           </e>
           <e p="FiniteStateMachineBase" t="Include">
@@ -56,7 +57,7 @@
           </e>
           <e p="Models" t="Include">
             <e p="InteractionEvent.cs" t="Include" />
-            <e p="LevelData.cs" t="Include" />
+            <e p="Levels.cs" t="Include" />
             <e p="LightColor.cs" t="Include" />
             <e p="Point.cs" t="Include" />
             <e p="PointExtensions.cs" t="Include" />
@@ -90,6 +91,7 @@
               <e p="PlayerAction.cs" t="Include" />
             </e>
             <e p="Interactions" t="Include">
+              <e p="GoalInteraction.cs" t="Include" />
               <e p="InteractableGatherer.cs" t="Include" />
               <e p="InteractionObserver.cs" t="Include" />
               <e p="Interactor.cs" t="Include" />
@@ -114,6 +116,7 @@
               <e p="ILightInteractable.cs" t="Include" />
               <e p="ILightInteractor.cs" t="Include" />
             </e>
+            <e p="LevelManager.cs" t="Include" />
             <e p="LightMovement.cs" t="Include" />
             <e p="LightTrailRenderer.cs" t="Include" />
             <e p="Movement.cs" t="Include" />

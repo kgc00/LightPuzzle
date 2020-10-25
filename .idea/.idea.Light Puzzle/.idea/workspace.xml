@@ -15,6 +15,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/81986B7D-E77F-470C-8157-A969000B3A00/e9/71a1c77b/CircleCollider2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity/Tile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CC8EC07-5538-4164-96E5-DB5D391208AC/df/2b4892c5/SerializeField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CC8EC07-5538-4164-96E5-DB5D391208AC/d0/af39b0cf/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/Editor/Sandbox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B17F35B0-8B86-4A3C-A09A-7032B437596E/82/0b91dcbc/Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CC8EC07-5538-4164-96E5-DB5D391208AC/8f/bac44b8c/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
@@ -24,10 +25,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Color.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/ColorType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/SoftUnlockable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/SoftGate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightDivider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IReflectiveSurface.cs" />
@@ -64,17 +61,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/LightColor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightColor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractionTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightTrailRenderer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LightPuzzleUtils/Helpers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightWallCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/MirrorSurface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/NonPersistentGate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LightPuzzleUtils/Helpers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Levels.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/GoalInteraction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entity/Singleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/LevelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
       </list>
     </option>
   </component>
@@ -129,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="104320000" />
+      <workItem from="1602964599347" duration="114044000" />
     </task>
     <servers />
   </component>

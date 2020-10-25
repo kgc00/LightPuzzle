@@ -39,11 +39,12 @@ namespace System.Interactions {
             var lightHistory = interactor.Behaviour.GetComponent<IInteractionTracker>().History;
             var lightColor = interactor.Behaviour.GetComponent<ILightColor>().LightColor;
 
-            Vector3 spawnPos = transform.position + transform.up * 1.1f;
-            var spawnNegPos = transform.position + (transform.up * -1.1f);
+            Vector3 spawnPos = transform.position + transform.right * 1.1f;
+            var spawnNegPos = transform.position + (transform.right * -1.1f);
             spawnPos.z = 0f;
             spawnNegPos.z = 0f;
 
+            print($" EULER ANGLES - {transform.eulerAngles}");
             var lightInstance = Instantiate(lightPrefab, spawnPos, GetLightRotationPositive());
             lightInstance.transform.SetParent(transform);
             lightInstance.GetComponent<IInteractionTracker>().InitializeHistory(lightHistory);
@@ -55,9 +56,10 @@ namespace System.Interactions {
             otherLightInstance.GetComponent<ILightColor>().UpdateLightColor(lightColor);
         }
 
-        private Quaternion GetLightRotationPositive() => Quaternion.Euler(transform.eulerAngles);
+        // - 90 on z to get the right hand / left hand side
+        private Quaternion GetLightRotationPositive() => Quaternion.Euler(transform.rotation.eulerAngles - new Vector3(0,0,90f));
 
-        private Quaternion GetLightRotationNegative() => Quaternion.Inverse(GetLightRotationPositive());
+        private Quaternion GetLightRotationNegative() => Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0,0,90f));
 
         public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
             return new InteractionEvent(transform, GetType());
