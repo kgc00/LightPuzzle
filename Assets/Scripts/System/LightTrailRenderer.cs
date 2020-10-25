@@ -8,6 +8,7 @@ using UnityEngine;
 namespace System {
     [RequireComponent(typeof(IInteractionTracker))]
     [RequireComponent(typeof(LineRenderer))]
+    [RequireComponent(typeof(LightMovement))]
     public class LightTrailRenderer : MonoBehaviour, ILightColor {
         private IInteractionTracker tracker;
         private LineRenderer lineRenderer;
@@ -20,8 +21,9 @@ namespace System {
         private Transform trackerTrn;
         private Vector3 trackerPos;
         private float alpha = 1.0f;
-
+        private LightMovement lightMovement;
         private void Awake() {
+            lightMovement = gameObject.GetComponent<LightMovement>();
             lineRenderer = GetComponent<LineRenderer>();
             tracker = GetComponent<IInteractionTracker>();
             trackerTrn = tracker.Behaviour.transform;
@@ -62,12 +64,12 @@ namespace System {
             //
             // adding a check to see that we aren't sitting in one place (such as at a gate or wall)
             // before i draw the final connection from most recent history event to obj pos
-            if (Vector3.Distance(history[0].InteractorSnappedPosition, trackerPos) > 0.05f) {
+            if (lightMovement.enabled) {
                 // adding 1 to array length to leave 0 index open for assignement
                 lineRenderer.positionCount = history.Count + 1;
                 var points = new Vector3[history.Count + 1];
-                var t = Time.time;
                 // using a reverse for loop, start at end of array (oldest event)
+                // end at 1, leave that 0 index open
                 for (int i = points.Length; i-- > 1;) {
                     // removing 1 from i to keep index 0 open while mapping index => history index
                     points[i] = history[i - 1].InteractorSnappedPosition;
@@ -79,12 +81,9 @@ namespace System {
             else {
                 lineRenderer.positionCount = history.Count;
                 var points = new Vector3[history.Count];
-                var t = Time.time;
-                for (int i = points.Length; i-- > 1;) {
+                for (int i = points.Length; i-- > 0;) {
                     points[i] = history[i].InteractorSnappedPosition;
                 }
-
-                points[0] = new Vector3(trackerPos.x, trackerPos.y, 0);
                 lineRenderer.SetPositions(points);
             }
         }
