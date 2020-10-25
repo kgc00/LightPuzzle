@@ -25,6 +25,8 @@ namespace System.Interactions {
 
         private void HandleInteractionRemoved(Vector3 interactableSnappedPos, ILightInteractor interactor) {
             if (interactableSnappedPos.Snapped() != transform.position.Snapped()) return;
+            
+            print("HANDLING interaction removed: " + transform.position.Snapped());
 
             if (currentInteractors.Contains(interactor)) {
                 currentInteractors.Remove(interactor);
