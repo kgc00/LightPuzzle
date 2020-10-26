@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1011501947910093546}
   - component: {fileID: 1709639544494248978}
   m_Layer: 0
-  m_Name: SoftGate
+  m_Name: PersistentGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1c25019c1d8d39d43843e8526e2665bc, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

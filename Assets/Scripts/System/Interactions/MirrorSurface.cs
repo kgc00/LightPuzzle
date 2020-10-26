@@ -4,11 +4,11 @@ using Models;
 using UnityEngine;
 
 namespace System.Interactions {
-    [RequireComponent(typeof(RotationInteraction))]
+    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(BoxCollider2D))]
     public class MirrorSurface : MonoBehaviour, ILightInteractable, IInteractionHistoryProvider {
-        private RotationInteraction rotationInteraction;
         private ILightInteractor currentInteractor;
-
+        private RotationInteraction rotationInteraction;
         private void Awake() {
             InteractionObserver.OnInteractionEvent += InterruptCurrentInteraction;
             rotationInteraction = GetComponent<RotationInteraction>();
@@ -39,10 +39,12 @@ namespace System.Interactions {
                 yield return new WaitForEndOfFrame();
             }
 
-            // stop movement if mirror is currently rotating
-            interactor.Behaviour.GetComponent<LightMovement>().enabled = false;
-            while (rotationInteraction.Rotating) {
-                yield return new WaitForEndOfFrame();
+            if (rotationInteraction != null) {
+                // stop movement if mirror is currently rotating
+                interactor.Behaviour.GetComponent<LightMovement>().enabled = false;
+                while (rotationInteraction.Rotating) {
+                    yield return new WaitForEndOfFrame();
+                }
             }
 
             interactor.Behaviour.transform.SetPositionAndRotation(transform.position.Snapped(), transform.rotation);
