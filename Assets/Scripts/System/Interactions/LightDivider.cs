@@ -24,6 +24,12 @@ namespace System.Interactions {
         }
 
         public IEnumerator HandleInteraction(ILightInteractor interactor) {
+            var hist = interactor.Behaviour.GetComponent<LightInteractionTracker>().History;
+            if (hist != null && hist.Count > 0) {
+                if (hist[0].Type == GetType() &&
+                    hist[0].InteractableSnappedPosition == transform.position.Snapped()) yield break;
+            }
+
             while (Vector3.Distance(transform.position, interactor.Behaviour.transform.position) > .01f) {
                 yield return new WaitForEndOfFrame();
                 // case where something spawned too close and entered this coroutine
@@ -39,27 +45,23 @@ namespace System.Interactions {
             var lightHistory = interactor.Behaviour.GetComponent<IInteractionTracker>().History;
             var lightColor = interactor.Behaviour.GetComponent<ILightColor>().LightColor;
 
-            Vector3 spawnPos = transform.position + transform.right * 1.1f;
-            var spawnNegPos = transform.position + (transform.right * -1.1f);
-            spawnPos.z = 0f;
-            spawnNegPos.z = 0f;
-
-            print($" EULER ANGLES - {transform.eulerAngles}");
-            var lightInstance = Instantiate(lightPrefab, spawnPos, GetLightRotationPositive());
+            var lightInstance = Instantiate(lightPrefab, transform.position, GetLightRotationPositive());
             lightInstance.transform.SetParent(transform);
             lightInstance.GetComponent<IInteractionTracker>().InitializeHistory(lightHistory);
             lightInstance.GetComponent<ILightColor>().UpdateLightColor(lightColor);
 
-            var otherLightInstance = Instantiate(lightPrefab, spawnNegPos, GetLightRotationNegative());
+            var otherLightInstance = Instantiate(lightPrefab, transform.position, GetLightRotationNegative());
             otherLightInstance.transform.SetParent(transform);
             otherLightInstance.GetComponent<IInteractionTracker>().InitializeHistory(lightHistory);
             otherLightInstance.GetComponent<ILightColor>().UpdateLightColor(lightColor);
         }
 
         // - 90 on z to get the right hand / left hand side
-        private Quaternion GetLightRotationPositive() => Quaternion.Euler(transform.rotation.eulerAngles - new Vector3(0,0,90f));
+        private Quaternion GetLightRotationPositive() =>
+            Quaternion.Euler(transform.rotation.eulerAngles - new Vector3(0, 0, 90f));
 
-        private Quaternion GetLightRotationNegative() => Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0,0,90f));
+        private Quaternion GetLightRotationNegative() =>
+            Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0, 0, 90f));
 
         public InteractionEvent TrackInteraction(IInteractionTracker tracker) {
             return new InteractionEvent(transform, GetType());

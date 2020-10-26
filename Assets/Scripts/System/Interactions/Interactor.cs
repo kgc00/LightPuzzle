@@ -37,5 +37,11 @@ namespace System.Interactions {
             if (context.phase != InputActionPhase.Performed) return;
             Interact();
         }
+
+        public void OnRestart(InputAction.CallbackContext context) {
+            if (context.phase != InputActionPhase.Started) {
+                LevelManager.Instance.ReloadCurrent();
+            }
+        }
     }
 }

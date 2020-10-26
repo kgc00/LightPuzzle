@@ -25,8 +25,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/SoftGate.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightDivider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/IReflectiveSurface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ITrackInteractions.cs" />
@@ -67,7 +65,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightWallCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/MirrorSurface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/NonPersistentGate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LightPuzzleUtils/Helpers.cs" />
@@ -75,7 +72,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/GoalInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entity/Singleton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LevelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/Interactor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Movement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/MirrorSurface.cs" />
       </list>
     </option>
   </component>
@@ -130,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="115374000" />
+      <workItem from="1602964599347" duration="118472000" />
     </task>
     <servers />
   </component>

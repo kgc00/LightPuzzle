@@ -34,7 +34,6 @@ namespace System.Interactions {
         }
 
         public IEnumerator HandleInteraction(ILightInteractor interactor) {
-            print("MIRROR SURF INT");
             currentInteractor = interactor;
             while (Vector3.Distance(interactor.Behaviour.transform.position, transform.position) > .05f) {
                 yield return new WaitForEndOfFrame();
