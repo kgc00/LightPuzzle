@@ -28,6 +28,30 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "NextLevel",
+                    "type": "Button",
+                    "id": "993f9d23-0fab-43a9-9975-9ee6225fd277",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "PreviousLevel",
+                    "type": "Button",
+                    "id": "18d3c062-b9aa-42b8-abf7-b317ee25dff6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MainMenu",
+                    "type": "Button",
+                    "id": "089c98b7-a18b-4f46-b1dc-777197f6b3ab",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -237,6 +261,39 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Restart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bd99887d-8818-495d-b947-99420c5a9603",
+                    "path": "<Keyboard>/equals",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "NextLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9d5def53-d5e2-49ce-89ea-d1570260b116",
+                    "path": "<Keyboard>/minus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "PreviousLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36a9eac3-9a3b-4f09-a1ea-e445fb7fc6f9",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "MainMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

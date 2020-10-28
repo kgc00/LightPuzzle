@@ -41,6 +41,30 @@ public class @PlayerAction : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""NextLevel"",
+                    ""type"": ""Button"",
+                    ""id"": ""993f9d23-0fab-43a9-9975-9ee6225fd277"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""PreviousLevel"",
+                    ""type"": ""Button"",
+                    ""id"": ""18d3c062-b9aa-42b8-abf7-b317ee25dff6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MainMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""089c98b7-a18b-4f46-b1dc-777197f6b3ab"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -250,6 +274,39 @@ public class @PlayerAction : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Restart"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bd99887d-8818-495d-b947-99420c5a9603"",
+                    ""path"": ""<Keyboard>/equals"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""NextLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9d5def53-d5e2-49ce-89ea-d1570260b116"",
+                    ""path"": ""<Keyboard>/minus"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""PreviousLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""36a9eac3-9a3b-4f09-a1ea-e445fb7fc6f9"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""MainMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -830,6 +887,9 @@ public class @PlayerAction : IInputActionCollection, IDisposable
         m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
         m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
         m_Gameplay_Restart = m_Gameplay.FindAction("Restart", throwIfNotFound: true);
+        m_Gameplay_NextLevel = m_Gameplay.FindAction("NextLevel", throwIfNotFound: true);
+        m_Gameplay_PreviousLevel = m_Gameplay.FindAction("PreviousLevel", throwIfNotFound: true);
+        m_Gameplay_MainMenu = m_Gameplay.FindAction("MainMenu", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -894,6 +954,9 @@ public class @PlayerAction : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Move;
     private readonly InputAction m_Gameplay_Interact;
     private readonly InputAction m_Gameplay_Restart;
+    private readonly InputAction m_Gameplay_NextLevel;
+    private readonly InputAction m_Gameplay_PreviousLevel;
+    private readonly InputAction m_Gameplay_MainMenu;
     public struct GameplayActions
     {
         private @PlayerAction m_Wrapper;
@@ -901,6 +964,9 @@ public class @PlayerAction : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_Gameplay_Move;
         public InputAction @Interact => m_Wrapper.m_Gameplay_Interact;
         public InputAction @Restart => m_Wrapper.m_Gameplay_Restart;
+        public InputAction @NextLevel => m_Wrapper.m_Gameplay_NextLevel;
+        public InputAction @PreviousLevel => m_Wrapper.m_Gameplay_PreviousLevel;
+        public InputAction @MainMenu => m_Wrapper.m_Gameplay_MainMenu;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -919,6 +985,15 @@ public class @PlayerAction : IInputActionCollection, IDisposable
                 @Restart.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRestart;
                 @Restart.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRestart;
                 @Restart.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRestart;
+                @NextLevel.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnNextLevel;
+                @NextLevel.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnNextLevel;
+                @NextLevel.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnNextLevel;
+                @PreviousLevel.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPreviousLevel;
+                @PreviousLevel.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPreviousLevel;
+                @PreviousLevel.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPreviousLevel;
+                @MainMenu.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMainMenu;
+                @MainMenu.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMainMenu;
+                @MainMenu.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMainMenu;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -932,6 +1007,15 @@ public class @PlayerAction : IInputActionCollection, IDisposable
                 @Restart.started += instance.OnRestart;
                 @Restart.performed += instance.OnRestart;
                 @Restart.canceled += instance.OnRestart;
+                @NextLevel.started += instance.OnNextLevel;
+                @NextLevel.performed += instance.OnNextLevel;
+                @NextLevel.canceled += instance.OnNextLevel;
+                @PreviousLevel.started += instance.OnPreviousLevel;
+                @PreviousLevel.performed += instance.OnPreviousLevel;
+                @PreviousLevel.canceled += instance.OnPreviousLevel;
+                @MainMenu.started += instance.OnMainMenu;
+                @MainMenu.performed += instance.OnMainMenu;
+                @MainMenu.canceled += instance.OnMainMenu;
             }
         }
     }
@@ -1091,6 +1175,9 @@ public class @PlayerAction : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnRestart(InputAction.CallbackContext context);
+        void OnNextLevel(InputAction.CallbackContext context);
+        void OnPreviousLevel(InputAction.CallbackContext context);
+        void OnMainMenu(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

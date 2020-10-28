@@ -23,6 +23,7 @@ namespace System.Interactions {
 
         private void Awake() {
             interactableGatherer = GetComponent<InteractableGatherer>();
+            Instantiate(UnityEngine.Resources.Load<GameObject>("Controls UI"));
         }
 
         public void Interact() {
@@ -39,9 +40,27 @@ namespace System.Interactions {
         }
 
         public void OnRestart(InputAction.CallbackContext context) {
-            if (context.phase != InputActionPhase.Started) {
+            if (context.phase != InputActionPhase.Performed) return;
+            
                 LevelManager.Instance.ReloadCurrent();
-            }
+        }
+
+        public void OnNextLevel(InputAction.CallbackContext context) {
+           if (context.phase != InputActionPhase.Performed) return;
+         
+           LevelManager.Instance.LoadIndex(LevelManager.Instance.CurrentIndex + 1);
+        }
+
+        public void OnPreviousLevel(InputAction.CallbackContext context) {
+           if (context.phase != InputActionPhase.Performed) return;
+            
+                LevelManager.Instance.LoadIndex(LevelManager.Instance.CurrentIndex - 1);
+        }
+
+        public void OnMainMenu(InputAction.CallbackContext context) {
+           if (context.phase != InputActionPhase.Performed) return;
+            
+                LevelManager.Instance.LoadIndex(0);
         }
     }
 }

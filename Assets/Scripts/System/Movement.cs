@@ -55,5 +55,10 @@ namespace System {
 
         public void OnInteract(InputAction.CallbackContext context) { }
         public void OnRestart(InputAction.CallbackContext context) { }
+        public void OnNextLevel(InputAction.CallbackContext context) { }
+
+        public void OnPreviousLevel(InputAction.CallbackContext context) { }
+
+        public void OnMainMenu(InputAction.CallbackContext context) { }
     }
 }

@@ -60,7 +60,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightColor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightTrailRenderer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightWallCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/NonPersistentGate.cs" />
@@ -68,14 +67,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Levels.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/GoalInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entity/Singleton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/Interactor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Movement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/MirrorSurface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractionTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/LevelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LevelSelector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/LevelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/Interactor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightWallCollision.cs" />
       </list>
     </option>
   </component>
@@ -130,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="131811000" />
+      <workItem from="1602964599347" duration="135473000" />
     </task>
     <servers />
   </component>
@@ -215,9 +215,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="390" key="GridCell.Tab.3.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603665458420" />
-    <state x="794" y="241" key="RiderGenerateDialog" timestamp="1603573655043">
+    <state x="794" y="241" key="RiderGenerateDialog" timestamp="1603865536229">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="794" y="241" key="RiderGenerateDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1603865536229" />
     <state x="794" y="241" key="RiderGenerateDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603573655043" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1602984031830">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -235,10 +236,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603074906610" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603847239595">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603866849756">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1603847239595" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1603866849756" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603689674824" />
     <state x="2543" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603605825469" />
   </component>

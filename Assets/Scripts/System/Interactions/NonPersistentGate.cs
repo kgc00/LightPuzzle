@@ -92,10 +92,5 @@ namespace System.Interactions {
             }
             
         }
-
-        private void OnDrawGizmos() {
-            Gizmos.DrawSphere(collisionPos, 0.25f);
-            Gizmos.DrawWireSphere(interactorPos, 0.25f);
-        }
     }
 }

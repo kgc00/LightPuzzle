@@ -16,9 +16,12 @@ namespace System.Interactions {
         }
 
         public IEnumerator HandleInteraction(ILightInteractor interactor) {
+            print("Handling Wall Interaction");
             var collisionPos = Helpers.GetMultiCellSnappedCollisionPos(interactor.Behaviour.transform, tilemapCollider2D);
+            colPos = collisionPos;
+            interPos = interactor.Behaviour.transform.position;
 
-            while (Vector3.Distance(interactor.Behaviour.transform.position, collisionPos) > .05f) {
+            while (Vector3.Distance(interactor.Behaviour.transform.position, collisionPos) > .1f) {
                 yield return new WaitForEndOfFrame();
             }
             
@@ -32,5 +35,12 @@ namespace System.Interactions {
                 transform.position.Snapped(),
                 name,
                 GetType());
+
+        private Vector3 colPos;
+        private Vector3 interPos;
+        private void OnDrawGizmos() {
+            Gizmos.DrawSphere(colPos, 0.25f);
+            Gizmos.DrawWireSphere(interPos, 0.25f);
+        }
     }
 }
