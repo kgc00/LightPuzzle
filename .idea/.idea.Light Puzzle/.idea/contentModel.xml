@@ -117,6 +117,7 @@
               <e p="ILightInteractor.cs" t="Include" />
             </e>
             <e p="LevelManager.cs" t="Include" />
+            <e p="LevelSelector.cs" t="Include" />
             <e p="LightMovement.cs" t="Include" />
             <e p="LightTrailRenderer.cs" t="Include" />
             <e p="Movement.cs" t="Include" />

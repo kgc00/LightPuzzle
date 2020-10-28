@@ -13,11 +13,12 @@ namespace System {
         }
 
         public void LoadNext() {
-            print(currentIndex);
-            print(levels);
-            print(levels.Gameplay);
-            print(levels.Gameplay[currentIndex].name);
             currentIndex = Mathf.Clamp(currentIndex + 1, 0, levels.Gameplay.Count - 1);
+            Load(levels.Gameplay[currentIndex].name);
+        }
+
+        public void LoadIndex(int i) {
+            currentIndex = Mathf.Clamp(i, 0, levels.Gameplay.Count - 1);
             Load(levels.Gameplay[currentIndex].name);
         }
 
