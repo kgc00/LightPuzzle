@@ -59,13 +59,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/LightColor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightColor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractionTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightTrailRenderer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightWallCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/NonPersistentGate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LightPuzzleUtils/Helpers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Levels.cs" />
@@ -76,6 +74,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Movement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightDivider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/MirrorSurface.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractionTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
       </list>
     </option>
   </component>
@@ -130,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="121313000" />
+      <workItem from="1602964599347" duration="125697000" />
     </task>
     <servers />
   </component>

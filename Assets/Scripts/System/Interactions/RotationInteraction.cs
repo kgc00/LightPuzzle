@@ -10,27 +10,35 @@ namespace System.Interactions {
         private int rotationModifer = 1;
         private float RotationAmount => 180 * rotationModifer;
         public const float Duration = 0.5f;
+        public bool Resetting { get; private set; }
+
 
         public IEnumerator HandleInteraction() {
-            if (Rotating) yield break;
-
-
+            if (Rotating || Resetting) yield break;
+            
             Rotating = true;
+            Resetting = true;
 
-            var sequence = DOTween.Sequence();
+            var sequence = DOTween.Sequence();            
+            InteractionObserver.OnInteractionEvent(transform.position.Snapped());
+
 
             sequence.Append(
                 gameObject.transform
                     .DORotate(GetNewEuler(), Duration)
                     .SetEase(Ease.OutSine)
-                )
-                .AppendCallback(EndRotation);
+                )                
+                .AppendCallback(EndRotation)
+                .AppendInterval(0.1f)
+                .AppendCallback(Test);
 
             sequence.Play();
         }
 
+        private void Test() {
+            Resetting = false;
+        }
         private void EndRotation() {
-            InteractionObserver.OnInteractionEvent(transform.position.Snapped());
             Rotating = false;
             FlipRotationDirection();
         }

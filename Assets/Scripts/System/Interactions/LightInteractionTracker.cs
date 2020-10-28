@@ -112,6 +112,7 @@ namespace System.Interactions {
                 DividerInteractionsRemoved.Clear();
             }
 
+            
             for (int i = 0; i < History.Count; i++) {
                 if (History[i].InteractableSnappedPosition.Snapped() != interactionOccurancePosition.Snapped()) continue;
 

@@ -20,12 +20,12 @@ namespace System.Interactions {
 
         private void InterruptCurrentInteraction(Vector3 interactableSnappedPos) {
             if (interactableSnappedPos != transform.position.Snapped()) return;
-            print("Handling thing");
+            // print("Handling thing");
             if (currentInteractor != null) {
-                print("IN CRx");
-                currentInteractor.StopAllCR();
-                this.StopAllCoroutines();
-                currentInteractor.HandleBlockedInteraction();
+                // print("IN CRx");
+                // currentInteractor.StopAllCR();
+                // this.StopAllCoroutines();
+                // currentInteractor.HandleBlockedInteraction();
             }
         }
 
