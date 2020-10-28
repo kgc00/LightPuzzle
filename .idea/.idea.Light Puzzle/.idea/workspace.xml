@@ -62,7 +62,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/NonPersistentGate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LightPuzzleUtils/Helpers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Levels.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/GoalInteraction.cs" />
@@ -75,6 +74,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Movement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LevelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/Interactor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/NonPersistentGate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightWallCollision.cs" />
       </list>
     </option>
@@ -130,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="135473000" />
+      <workItem from="1602964599347" duration="136230000" />
     </task>
     <servers />
   </component>
