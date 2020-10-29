@@ -60,7 +60,7 @@ namespace System.Interactions {
         public void OnMainMenu(InputAction.CallbackContext context) {
            if (context.phase != InputActionPhase.Performed) return;
             
-                LevelManager.Instance.LoadIndex(0);
+                LevelManager.Instance.LoadMenu();
         }
     }
 }

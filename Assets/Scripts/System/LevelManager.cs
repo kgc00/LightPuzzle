@@ -7,29 +7,33 @@ using UnityEngine.SceneManagement;
 namespace System {
     public class LevelManager : Singleton<LevelManager> {
         [field: SerializeField] public int CurrentIndex { get; private set; }
-        [SerializeField] private Levels levels;
         private void OnEnable() {
-            if (levels == null) levels = UnityEngine.Resources.Load<Levels>("Levels");
+            CurrentIndex = 1;
         }
 
         public void LoadNext() {
-            print(CurrentIndex);
-            CurrentIndex = Mathf.Clamp(CurrentIndex + 1, 0, levels.Gameplay.Count - 1);
-            print(CurrentIndex);
+            CurrentIndex = Mathf.Clamp(CurrentIndex + 1, 1, 6);
 
-            Load(levels.Gameplay[CurrentIndex].name);
+            Load(CurrentIndex);
         }
 
         public void LoadIndex(int i) {
-            CurrentIndex = Mathf.Clamp(i, 0, levels.Gameplay.Count - 1);
-            Load(levels.Gameplay[CurrentIndex].name);
+            CurrentIndex = Mathf.Clamp(i, 1, 6);
+            Load(CurrentIndex);
         }
 
         public void ReloadCurrent() {
-            print(levels.Gameplay[CurrentIndex].name);
-            Load(levels.Gameplay[CurrentIndex].name);
+            Load(CurrentIndex);
         }
-        
-        private void Load(string name)=>SceneManager.LoadScene(name);
+
+        public void LoadTutorial() {
+            Load("MainMenuTutorial");
+        }
+        public void LoadMenu() {
+            Load("MainMenu");
+        }
+        private void Load(string levelName)=>SceneManager.LoadScene(levelName);
+
+        private void Load(int i)=>SceneManager.LoadScene(i);
     }
 }

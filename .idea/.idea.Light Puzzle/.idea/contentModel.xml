@@ -57,7 +57,6 @@
           </e>
           <e p="Models" t="Include">
             <e p="InteractionEvent.cs" t="Include" />
-            <e p="Levels.cs" t="Include" />
             <e p="LightColor.cs" t="Include" />
             <e p="Point.cs" t="Include" />
             <e p="PointExtensions.cs" t="Include" />
@@ -130,7 +129,7 @@
             </e>
           </e>
           <e p="Tools" t="Include">
-            <e p="PropertyDrawerUtility.cs" t="Include" />
+            <e p="FlexibleGridLayout.cs" t="Include" />
           </e>
         </e>
       </e>

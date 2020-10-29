@@ -3,12 +3,47 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="14019d30-62fd-4578-b187-ed70b99bc9a4" name="Default Changelist" comment="" />
+    <list default="true" id="14019d30-62fd-4578-b187-ed70b99bc9a4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Light Puzzle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light Puzzle/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Light Puzzle/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light Puzzle/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Light Puzzle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light Puzzle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Controls UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Controls UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Models/Levels.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Models/Levels.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/PropertyDrawerUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/PropertyDrawerUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Models/Point.cs" root0="FORCE_HIGHLIGHTING" />
@@ -61,7 +96,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LightTrailRenderer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightEmitter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interfaces/ILightInteractor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LightPuzzleUtils/Helpers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Levels.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/GoalInteraction.cs" />
@@ -72,10 +106,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/RotationInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/LevelSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Movement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/LevelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/Interactor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/NonPersistentGate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightWallCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/Interactions/LightInteractor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/LevelManager.cs" />
       </list>
     </option>
   </component>
@@ -112,10 +147,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23172">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="23172" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -130,7 +165,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602964581453</updated>
-      <workItem from="1602964599347" duration="136230000" />
+      <workItem from="1602964599347" duration="136949000" />
+      <workItem from="1603940122812" duration="682000" />
     </task>
     <servers />
   </component>
@@ -139,6 +175,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
@@ -236,10 +283,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603074906610" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603866849756">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603940124650">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1603866849756" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1603940124650" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603689674824" />
     <state x="2543" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603605825469" />
   </component>
